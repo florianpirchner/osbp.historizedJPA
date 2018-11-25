@@ -1,0 +1,119 @@
+package org.osbp.jpa.historized.tests;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+
+
+public class AddressTimedependentTest extends PersistenceTesting {
+
+	private EntityManager em;
+
+	@Test
+	public void testNewVersion() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+
+		clear(em);
+
+		// create Address Version 1
+		//
+
+		Address a_v1 = new Address("Heidelberg", "DE", "Version 1", "69115", "Hebelstrasse");
+		a_v1.setCustomVersion(true);
+		a_v1.setValidFrom(getFromDate(2018, Calendar.JANUARY, 1).getTime());
+		persist(em, a_v1);
+		Address.ID key_v1 = a_v1.getHistKey();
+
+		// create new object an set id
+		//
+		Address a_v2 = new Address("Heidelberg", "AT", "Version 2", "69115", "Hebelstrasse");
+		a_v2.setId(a_v1.getId());
+		a_v2.setCustomVersion(true);
+		a_v2.setValidFrom(getFromDate(2018, Calendar.FEBRUARY, 2).getTime());
+		persist(em, a_v2);
+		Address.ID key_v2 = a_v2.getHistKey();
+
+		// use method new version
+		//
+		Address a_v3 = a_v2.newVersion();
+		a_v3.setCustomVersion(true);
+		a_v3.setValidFrom(getFromDate(2018, Calendar.JULY, 7).getTime());
+		a_v3.setProvince("Version 3"); 
+		a_v3.setCountry("PL");
+		persist(em, a_v3);
+		Address.ID key_v3 = a_v3.getHistKey();
+
+		Address a_v4 = new Address("Heidelberg", "AU", "Version 4", "69115", "Hebelstrasse");
+		a_v4.setId(a_v1.getId());
+		a_v4.setCustomVersion(true);
+		a_v4.setValidFrom(getFromDate(2018, Calendar.DECEMBER, 12).getTime());
+		persist(em, a_v4);
+		Address.ID key_v4 = a_v4.getHistKey();
+
+		Address persA_v1 = em.find(Address.class, key_v1);
+		Address persA_v2 = em.find(Address.class, key_v2);
+		Address persA_v3 = em.find(Address.class, key_v3);
+		Address persA_v4 = em.find(Address.class, key_v4);
+
+		Date valFrom_v1 = new Date(persA_v1.getValidFrom());
+		Date valUntil_v1 = new Date(persA_v1.getValidUntil());
+		Date valFrom_v2 = new Date(persA_v2.getValidFrom());
+		Date valUntil_v2 = new Date(persA_v2.getValidUntil());
+		Date valFrom_v3 = new Date(persA_v3.getValidFrom());
+		Date valUntil_v3 = new Date(persA_v3.getValidUntil());
+		Date valFrom_v4 = new Date(persA_v4.getValidFrom());
+		Date valUntil_v4 = new Date(persA_v4.getValidUntil());
+		
+		Assert.assertEquals(2018, getYear(valFrom_v1));
+		Assert.assertEquals(Calendar.JANUARY, getMonth(valFrom_v1));
+		Assert.assertEquals(1, getDay(valFrom_v1));
+
+		Assert.assertEquals(2018, getYear(valFrom_v2));
+		Assert.assertEquals(Calendar.FEBRUARY, getMonth(valFrom_v2));
+		Assert.assertEquals(2, getDay(valFrom_v2));
+		Assert.assertEquals(valFrom_v2, valUntil_v1);
+
+		Assert.assertEquals(2018, getYear(valFrom_v3));
+		Assert.assertEquals(Calendar.JULY, getMonth(valFrom_v3));
+		Assert.assertEquals(7, getDay(valFrom_v3));
+		Assert.assertEquals(valFrom_v3, valUntil_v2);
+		
+		Assert.assertEquals(2018, getYear(valFrom_v4));
+		Assert.assertEquals(Calendar.DECEMBER, getMonth(valFrom_v4));
+		Assert.assertEquals(12, getDay(valFrom_v4));
+		Assert.assertEquals(valFrom_v4, valUntil_v3);
+	
+
+		// access with valid from
+		//
+		Address valid_v1 = AddressService.getValidByDate(em, valFrom_v1);
+		Assert.assertEquals(valFrom_v1.getTime(), valid_v1.getValidFrom());
+		
+		Address valid_v2 = AddressService.getValidByDate(em, valFrom_v2);
+		Assert.assertEquals(valid_v2.getValidFrom(), valid_v2.getValidFrom());
+		
+		Address valid_v3 = AddressService.getValidByDate(em, valFrom_v3);
+		Assert.assertEquals(valid_v3.getValidFrom(), valid_v3.getValidFrom());
+		
+		Address valid_v4 = AddressService.getValidByDate(em, valFrom_v4);
+		Assert.assertEquals(valid_v4.getValidFrom(), valid_v4.getValidFrom());
+		
+		
+		
+		System.out.println(currentValid);
+		
+		
+		
+		
+	}
+
+
+}

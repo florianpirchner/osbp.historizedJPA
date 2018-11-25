@@ -1,0 +1,128 @@
+/*******************************************************************************
+ * Copyright (c) 1998, 2011 Oracle. All rights reserved.
+ * This program and the accompanying materials are made available under the 
+ * terms of the Eclipse Public License v1.0 and Eclipse Distribution License v. 1.0 
+ * which accompanies this distribution. 
+ * The Eclipse Public License is available at http://www.eclipse.org/legal/epl-v10.html
+ * and the Eclipse Distribution License is available at 
+ * http://www.eclipse.org/org/documents/edl-v10.php.
+ *
+ * Contributors:
+ *              dclarke - initial JPA Employee example using XML (bug 217884)
+ *              mbraeuer - annotated version, transformation
+ *              jclingan - Updated to use JPA 2.1 Attribute Converters
+ ******************************************************************************/
+package org.osbp.jpa.historized.tests.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Convert;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Version;
+
+/**
+ * TODO
+ * 
+ * @author dclarke
+ * @author jclingan
+ * @since EclipseLink 2.5.2
+ */
+@Entity
+public class EmployeeOneToMany {
+
+	@Id
+	@Column(name = "EMP_ID")
+	@GeneratedValue
+	private int id;
+
+	@Column(name = "F_NAME")
+	private String firstName;
+
+	/**
+	 * Gender mapped using Basic with an ObjectTypeConverter to map between
+	 * single char code value in database to enum. JPA only supports mapping to
+	 * the full name of the enum or its ordinal value.
+	 */
+	@Basic
+	@Column(name = "GENDER")
+	@Convert(converter = GenderConverter.class)
+	private Gender gender = Gender.Male;
+
+	@Column(name = "L_NAME")
+	private String lastName;
+
+	@Version
+	private Long version;
+
+	@OneToMany
+	private List<Address> addresses = new ArrayList<>();
+
+	public EmployeeOneToMany() {
+	}
+
+	public EmployeeOneToMany(int id, String firstName, String lastName) {
+		setId(id);
+		setFirstName(firstName);
+		setLastName(lastName);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int empId) {
+		this.id = empId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String fName) {
+		this.firstName = fName;
+	}
+
+	public Gender getGender() {
+		return this.gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lName) {
+		this.lastName = lName;
+	}
+
+	public Long getVersion() {
+		return version;
+	}
+
+	public void setVersion(Long version) {
+		this.version = version;
+	}
+
+	public List<Address> getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
+
+	public String toString() {
+		return "Employee(" + getId() + ": " + getLastName() + ", " + getFirstName() + ")";
+	}
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddressVersioningTest All" project="org.osbp.jpa.historized.tests" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.324">
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.324">
+      <error>Local Exception Stack: 
+Exception [EclipseLink-30005] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.PersistenceUnitLoadingException
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: sun.misc.Launcher$AppClassLoader@18b4aac2
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [employee] failed.
+Internal Exception: Exception [EclipseLink-7220] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The @JoinColumns on the annotated element [field addressRef] from the entity class [class org.osbp.jpa.historized.tests.entities.Employee] is incomplete. When the source entity class uses a composite primary key, a @JoinColumn must be specified for each join column using the @JoinColumns. Both the name and the referencedColumnName elements must be specified in each such @JoinColumn.
+	at org.eclipse.persistence.exceptions.PersistenceUnitLoadingException.exceptionSearchingForPersistenceResources(PersistenceUnitLoadingException.java:127)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:111)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:71)
+	at org.osbp.jpa.historized.tests.OneToOneCascade.test(OneToOneCascade.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [employee] failed.
+Internal Exception: Exception [EclipseLink-7220] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The @JoinColumns on the annotated element [field addressRef] from the entity class [class org.osbp.jpa.historized.tests.entities.Employee] is incomplete. When the source entity class uses a composite primary key, a @JoinColumn must be specified for each join column using the @JoinColumns. Both the name and the referencedColumnName elements must be specified in each such @JoinColumn.
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2023)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2014)
+	at org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.callPredeploy(JPAInitializer.java:100)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:100)
+	... 27 more
+Caused by: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [employee] failed.
+Internal Exception: Exception [EclipseLink-7220] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The @JoinColumns on the annotated element [field addressRef] from the entity class [class org.osbp.jpa.historized.tests.entities.Employee] is incomplete. When the source entity class uses a composite primary key, a @JoinColumn must be specified for each join column using the @JoinColumns. Both the name and the referencedColumnName elements must be specified in each such @JoinColumn.
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:231)
+	... 31 more
+Caused by: Exception [EclipseLink-7220] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The @JoinColumns on the annotated element [field addressRef] from the entity class [class org.osbp.jpa.historized.tests.entities.Employee] is incomplete. When the source entity class uses a composite primary key, a @JoinColumn must be specified for each join column using the @JoinColumns. Both the name and the referencedColumnName elements must be specified in each such @JoinColumn.
+	at org.eclipse.persistence.exceptions.ValidationException.incompleteJoinColumnsSpecified(ValidationException.java:1850)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.MappingAccessor.getJoinColumnsAndValidate(MappingAccessor.java:765)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.MappingAccessor.getJoinColumns(MappingAccessor.java:665)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processForeignKeyRelationship(ObjectAccessor.java:638)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processOwningMappingKeys(ObjectAccessor.java:708)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ManyToOneAccessor.process(ManyToOneAccessor.java:123)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processOwningRelationshipAccessors(MetadataProject.java:1595)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1848)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:577)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:604)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1936)
+	... 29 more
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

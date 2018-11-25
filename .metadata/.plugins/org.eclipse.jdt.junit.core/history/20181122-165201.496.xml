@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddressVersioningTest (1)" project="org.osbp.jpa.historized.tests" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="org.osbp.jpa.historized.tests.OneToOneCascade" time="66.599">
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="66.599"/>
+  </testsuite>
+</testrun>

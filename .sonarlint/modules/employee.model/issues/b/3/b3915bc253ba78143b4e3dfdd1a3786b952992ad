@@ -1,0 +1,33 @@
+
+psquid:S2259A"DA "NullPointerException" could be thrown; "_adrV1" is nullable here.(ËŸÔ¤ÿÿÿÿÿHÊËRMAJORZBUG
+g
+squid:S106Ş"9Replace this use of System.out or System.err by a logger.(ÇµŠ‘HÆËRMAJORZ
+CODE_SMELL
+lsquid:UnusedPrivateMethodÃ"*Remove this unused private "sleep" method.(££ì±ùÿÿÿÿH­ËRMAJORZ
+CODE_SMELL
+n
+squid:S106¬"9Replace this use of System.out or System.err by a logger.(ı²¶Ø8ÊÙ´êğ,HŠÌRMAJORZ
+CODE_SMELL
+n
+squid:S106¾"9Replace this use of System.out or System.err by a logger.(ı²¶Ø8Âëöêğ,HÂÌRMAJORZ
+CODE_SMELL
+…squid:S00117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²¡Ò™şÿÿÿÿHÍËRMINORZ
+CODE_SMELL
+Šsquid:S1192Š"LDefine a constant instead of duplicating this literal "Foo bar foo" 3 times.(–Ø£Ãûÿÿÿÿ8ÊÙ´êğ,H†ÌRCRITICALZ
+CODE_SMELL
+nsquid:S2142ª"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€HÈËRMAJORZBUG
+Ysquid:S00108Ë")Either remove or fill this block of code.(ä ¹€HÌËRMAJORZ
+CODE_SMELL
+Ysquid:S00108ª")Either remove or fill this block of code.(ä ¹€HËËRMAJORZ
+CODE_SMELL
+squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(—÷Û³8ÊÙ´êğ,HˆÌRMAJORZ
+CODE_SMELL
+s
+squid:S106Û"9Replace this use of System.out or System.err by a logger.(»¢ƒùÿÿÿÿ8ÊÙ´êğ,H‰ÌRMAJORZ
+CODE_SMELL
+nsquid:S2142Ë"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€HÉËRMAJORZBUG
+l
+squid:S106¯"9Replace this use of System.out or System.err by a logger.(¡»ó¬øÿÿÿÿHÅËRMAJORZ
+CODE_SMELL
+esquid:S1135Ä"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿHÇËRINFOZ
+CODE_SMELL

@@ -1,0 +1,199 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.assertTrue;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+
+public class AddressVersioningTest extends PersistenceTesting {
+
+	private EntityManager em;
+
+	@Test
+	public void test() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+
+		clear(em);
+		
+		// create Address Version 1
+		//
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
+		persist(em, a_v1);
+
+		Address.ID key_v1 = a_v1.getHistKey();
+		Address persA_v1 = em.find(Address.class, key_v1);
+		assertTrue(persA_v1.isHistCurrent());
+
+		// create Address Version 2 by creating new Address Entity
+		//
+		Address a_v2 = new Address(a_v1.getCity(), a_v1.getCountry(), a_v1.getProvince(), a_v1.getPostalCode(),
+				a_v1.getStreet());
+		a_v2.setId(a_v1.getId());
+		a_v2.setHistCurrent(true);
+		a_v2.setCountry("AT");
+		merge(em, a_v2);
+		persA_v1 = em.find(Address.class, key_v1);
+		Address persA_v2 = getHistCurrent(em);
+		Address.ID key_v2 = persA_v2.getHistKey();
+
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertTrue(persA_v2.isHistCurrent());
+
+		// create Address Version 3 by #newVersion
+		Address a_v3 = persA_v2.newVersion();
+		a_v3.setCountry("DE");
+		persist(em, a_v3);
+		Address persA_v3 = getHistCurrent(em);
+
+		persA_v1 = em.find(Address.class, key_v1);
+		persA_v2 = em.find(Address.class, key_v2);
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertFalse(persA_v2.isHistCurrent());
+		Assert.assertTrue(persA_v3.isHistCurrent());
+
+	}
+
+	@Test
+	public void testNewObject() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+
+		clear(em);
+		
+		// create Address Version 1
+		//
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
+		persist(em, a_v1);
+
+		Address.ID key_v1 = a_v1.getHistKey();
+		Address persA_v1 = em.find(Address.class, key_v1);
+		assertTrue(persA_v1.isHistCurrent());
+
+		// create Address Version 2 by creating new Address Entity
+		//
+		Address a_v2 = new Address(a_v1.getCity(), a_v1.getCountry(), a_v1.getProvince(), a_v1.getPostalCode(),
+				a_v1.getStreet());
+		a_v2.setId(a_v1.getId());
+		a_v2.setHistCurrent(true);
+		a_v2.setCountry("AT");
+		merge(em, a_v2);
+		persA_v1 = em.find(Address.class, key_v1);
+		Address persA_v2 = getHistCurrent(em);
+		Address.ID key_v2 = persA_v2.getHistKey();
+
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertTrue(persA_v2.isHistCurrent());
+
+		// create Address Version 3 by #newVersion
+		Address a_v3 = new Address(a_v2.getCity(), a_v2.getCountry(), a_v2.getProvince(), a_v2.getPostalCode(),
+				a_v2.getStreet());
+		a_v3.setId(a_v2.getId());
+		a_v3.setHistCurrent(true);
+		a_v3.setCountry("PL");
+		persist(em, a_v3);
+		Address persA_v3 = getHistCurrent(em);
+
+		persA_v1 = em.find(Address.class, key_v1);
+		persA_v2 = em.find(Address.class, key_v2);
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertFalse(persA_v2.isHistCurrent());
+		Assert.assertTrue(persA_v3.isHistCurrent());
+
+	}
+
+	@Test
+	public void testNewVersion() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+		
+		clear(em);
+		
+		// create Address Version 1
+		//
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
+		persist(em, a_v1);
+
+		Address.ID key_v1 = a_v1.getHistKey();
+		Address persA_v1 = em.find(Address.class, key_v1);
+		assertTrue(persA_v1.isHistCurrent());
+
+		// create Address Version 2
+		//
+		Address a_v2 = persA_v1.newVersion();
+		a_v2.setCountry("AT");
+		merge(em, a_v2);
+		persA_v1 = em.find(Address.class, key_v1);
+		Address persA_v2 = getHistCurrent(em);
+		Address.ID key_v2 = persA_v2.getHistKey();
+
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertTrue(persA_v2.isHistCurrent());
+
+		// create Address Version 3
+		//
+		Address a_v3 = persA_v1.newVersion();
+		a_v3.setCountry("PL");
+		merge(em, a_v3);
+		Address persA_v3 = getHistCurrent(em);
+
+		persA_v1 = em.find(Address.class, key_v1);
+		persA_v2 = em.find(Address.class, key_v2);
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertFalse(persA_v2.isHistCurrent());
+		Assert.assertTrue(persA_v3.isHistCurrent());
+
+	}
+	
+	
+	@Test
+	public void testUpdateOldVersion() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+		
+		clear(em);
+		
+		// create Address Version 1
+		//
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
+		persist(em, a_v1);
+
+		Address.ID key_v1 = a_v1.getHistKey();
+		Address persA_v1 = em.find(Address.class, key_v1);
+		assertTrue(persA_v1.isHistCurrent());
+
+		// create Address Version 2
+		//
+		Address a_v2 = persA_v1.newVersion();
+		a_v2.setCountry("AT");
+		merge(em, a_v2);
+		persA_v1 = em.find(Address.class, key_v1);
+		Address persA_v2 = getHistCurrent(em);
+
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertTrue(persA_v2.isHistCurrent());
+
+		
+		persA_v1 = em.find(Address.class, key_v1);
+		
+		persA_v1.setCountry("PL");
+		try {
+			merge(em, persA_v1);
+		} catch (Exception e) {
+			String msg = e.getMessage();
+			if(!msg.startsWith("java.lang.IllegalArgumentException: Version must be 0.")) {
+				throw new IllegalStateException("Test failed");
+			}
+		}
+
+	}
+	
+}

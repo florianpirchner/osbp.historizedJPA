@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OneToManyTest" project="org.osbp.jpa.historized.tests" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="test" classname="org.osbp.jpa.historized.tests.OneToManyTest" time="17.327"/>
+</testrun>

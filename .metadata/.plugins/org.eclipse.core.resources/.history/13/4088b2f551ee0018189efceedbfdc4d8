@@ -1,0 +1,22 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.*;
+
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+
+public class AddressVersioningTest extends PersistenceTesting {
+
+	@Test
+	public void test() {
+
+		EntityManagerFactory emf = createEMF(true);
+		
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "");
+		
+		
+	}
+
+}

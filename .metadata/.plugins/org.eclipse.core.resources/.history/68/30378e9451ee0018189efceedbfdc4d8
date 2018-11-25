@@ -1,0 +1,14 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class OneToOneCascadeTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

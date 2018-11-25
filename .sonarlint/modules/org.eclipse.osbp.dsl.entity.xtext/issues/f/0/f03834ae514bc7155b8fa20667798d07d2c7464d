@@ -1,0 +1,230 @@
+
+‡squid:S1192"QDefine a constant instead of duplicating this literal "java.lang.String" 3 times.(ÍÏÓ¬ÿÿÿÿÿHü<RCRITICALZ
+CODE_SMELL
+¶squid:S1192º"„Define a constant instead of duplicating this literal "Cascade must not affect the common parent in a many-to-one relation" 4 times.(£ßHı<RCRITICALZ
+CODE_SMELL
+¤squid:S1192´"nDefine a constant instead of duplicating this literal "Only one opposite may be specified as cascade" 4 times.(òìø‰øÿÿÿÿHş<RCRITICALZ
+CODE_SMELL
+\squid:S1066§"/Merge this if statement with the enclosing one.(©í©bHÿ<RMAJORZ
+CODE_SMELL
+]squid:S1066¹"/Merge this if statement with the enclosing one.(ÄİíÏH€=RMAJORZ
+CODE_SMELL
+bsquid:S1066Ë"/Merge this if statement with the enclosing one.(ÓØ¨ŸÿÿÿÿÿH=RMAJORZ
+CODE_SMELL
+bsquid:S1066ß"/Merge this if statement with the enclosing one.(Æİ£‡ÿÿÿÿÿH‚=RMAJORZ
+CODE_SMELL
+]squid:S1066ñ"/Merge this if statement with the enclosing one.(èòô«Hƒ=RMAJORZ
+CODE_SMELL
+\squid:S1066û"/Merge this if statement with the enclosing one.(©í©bH„=RMAJORZ
+CODE_SMELL
+]squid:S1066ƒ"/Merge this if statement with the enclosing one.(ÄİíÏH…=RMAJORZ
+CODE_SMELL
+\squid:S1066"/Merge this if statement with the enclosing one.(©í©bH†=RMAJORZ
+CODE_SMELL
+bsquid:S1066˜"/Merge this if statement with the enclosing one.(ÓØ¨ŸÿÿÿÿÿH‡=RMAJORZ
+CODE_SMELL
+]squid:S1066±"/Merge this if statement with the enclosing one.(€ï®Hˆ=RMAJORZ
+CODE_SMELL
+]squid:S1066¸"/Merge this if statement with the enclosing one.(€ï®H‰=RMAJORZ
+CODE_SMELL
+bsquid:S1066õ"/Merge this if statement with the enclosing one.(ßĞº·ûÿÿÿÿHŠ=RMAJORZ
+CODE_SMELL
+\squid:S1066ƒ"/Merge this if statement with the enclosing one.(í–Ô1H‹=RMAJORZ
+CODE_SMELL
+bsquid:S1066’"/Merge this if statement with the enclosing one.(†²³üùÿÿÿÿHŒ=RMAJORZ
+CODE_SMELL
+bsquid:S1066¡"/Merge this if statement with the enclosing one.(Ú„¥üÿÿÿÿH=RMAJORZ
+CODE_SMELL
+bsquid:S1066Ü"/Merge this if statement with the enclosing one.(‹¾ıÿÿÿÿH=RMAJORZ
+CODE_SMELL
+Œsquid:S2293²"YReplace the type specification in this constructor call with the diamond operator ("<>").(ñğßâøÿÿÿÿH=RMINORZ
+CODE_SMELL
+Œsquid:S2293Ï"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÃÔı¢úÿÿÿÿH=RMINORZ
+CODE_SMELL
+Œsquid:S2293Æ"YReplace the type specification in this constructor call with the diamond operator ("<>").(Á“ ªÿÿÿÿÿH‘=RMINORZ
+CODE_SMELL
+Œsquid:S2293Î"YReplace the type specification in this constructor call with the diamond operator ("<>").(¬‰¯ıÿÿÿÿH’=RMINORZ
+CODE_SMELL
+Esquid:S1872Ï"Use "isAssignableFrom" instead.(ã§´GH“=RMAJORZBUG
+Nsquid:S3878¼"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH”=RMINORZ
+CODE_SMELL
+Nsquid:S3878Î"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH•=RMINORZ
+CODE_SMELL
+Nsquid:S3878á"Remove this array creation.(„òøëùÿÿÿÿH–=RMINORZ
+CODE_SMELL
+Nsquid:S3878ó"Remove this array creation.(ÒÜ±ËùÿÿÿÿH—=RMINORZ
+CODE_SMELL
+Nsquid:S3878†"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH˜=RMINORZ
+CODE_SMELL
+Nsquid:S3878›"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH™=RMINORZ
+CODE_SMELL
+Nsquid:S3878ˆ"Remove this array creation.(¯§ÊúûÿÿÿÿHš=RMINORZ
+CODE_SMELL
+Isquid:S3878"Remove this array creation.(¥Ò™ÄH›=RMINORZ
+CODE_SMELL
+Nsquid:S3878–"Remove this array creation.(úüˆÌùÿÿÿÿHœ=RMINORZ
+CODE_SMELL
+Nsquid:S3878Ÿ"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH=RMINORZ
+CODE_SMELL
+Nsquid:S3878¨"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH=RMINORZ
+CODE_SMELL
+Isquid:S3878³"Remove this array creation.(ì…ç”HŸ=RMINORZ
+CODE_SMELL
+Nsquid:S3878»"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH =RMINORZ
+CODE_SMELL
+Nsquid:S3878÷"Remove this array creation.(ïß©ÑøÿÿÿÿH¡=RMINORZ
+CODE_SMELL
+Nsquid:S3878†"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH¢=RMINORZ
+CODE_SMELL
+Nsquid:S3878•"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH£=RMINORZ
+CODE_SMELL
+Nsquid:S3878¤"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH¤=RMINORZ
+CODE_SMELL
+Nsquid:S3878³"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH¥=RMINORZ
+CODE_SMELL
+Isquid:S3878Ş"Remove this array creation.(»÷½H¦=RMINORZ
+CODE_SMELL
+Nsquid:S3878ê"Remove this array creation.(ŸÔÎ‡ùÿÿÿÿH§=RMINORZ
+CODE_SMELL
+ƒsquid:S3776û"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(ãğ¬ªH¨=RCRITICALZ
+CODE_SMELL
+ƒsquid:S3776É"RRefactor this method to reduce its Cognitive Complexity from 74 to the 15 allowed.(‚˜áµH©=RCRITICALZ
+CODE_SMELL
+ˆsquid:S3776×"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(®ŞÅúüÿÿÿÿHª=RCRITICALZ
+CODE_SMELL
+ˆsquid:S3776ù"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(Ÿ™ûüÿÿÿÿH«=RCRITICALZ
+CODE_SMELL
+ƒsquid:S3776Ì"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(şã¯¹H¬=RCRITICALZ
+CODE_SMELL
+}squid:S00100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ì­ÅH­=RMINORZ
+CODE_SMELL
+‚squid:S00100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì¬ÈüÿÿÿÿH®=RMINORZ
+CODE_SMELL
+‚squid:S00100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êìØáûÿÿÿÿH¯=RMINORZ
+CODE_SMELL
+}squid:S00100±"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¬¦ªH°=RMINORZ
+CODE_SMELL
+}squid:S00100Ã"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò•€«H±=RMINORZ
+CODE_SMELL
+}squid:S00100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªH²=RMINORZ
+CODE_SMELL
+‚squid:S00100ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º£€ÆıÿÿÿÿH³=RMINORZ
+CODE_SMELL
+|squid:S00100ù"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÛŸ5H´=RMINORZ
+CODE_SMELL
+}squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Â§°Hµ=RMINORZ
+CODE_SMELL
+‚squid:S00100±"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÙöñúÿÿÿÿH¶=RMINORZ
+CODE_SMELL
+}squid:S00100ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¤Ñ¹H·=RMINORZ
+CODE_SMELL
+}squid:S00100û"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãğ¬ªH¸=RMINORZ
+CODE_SMELL
+‚squid:S00100¯"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò´ç­üÿÿÿÿH¹=RMINORZ
+CODE_SMELL
+‚squid:S00100Á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®•‰ÄøÿÿÿÿHº=RMINORZ
+CODE_SMELL
+‚squid:S00100Å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—•…ÎşÿÿÿÿH»=RMINORZ
+CODE_SMELL
+}squid:S00100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚˜áµH¼=RMINORZ
+CODE_SMELL
+‚squid:S00100×"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ŞÅúüÿÿÿÿH½=RMINORZ
+CODE_SMELL
+‚squid:S00100ø"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÔíÿÿÿÿÿÿH¾=RMINORZ
+CODE_SMELL
+|squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¼†H¿=RMINORZ
+CODE_SMELL
+}squid:S00100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËŞ“›HÀ=RMINORZ
+CODE_SMELL
+}squid:S00100Ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şã¯¹HÁ=RMINORZ
+CODE_SMELL
+|squid:S00100ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áØšMHÂ=RMINORZ
+CODE_SMELL
+}squid:S00100ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä°€ŸHÃ=RMINORZ
+CODE_SMELL
+·squid:S1186Á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(®•‰ÄøÿÿÿÿHÄ=RCRITICALZ
+CODE_SMELL
+·squid:S1186Å"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—•…ÎşÿÿÿÿHÅ=RCRITICALZ
+CODE_SMELL
+squid:S00115U"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(²¶¼ùÿÿÿÿHÆ=RCRITICALZ
+CODE_SMELL
+squid:S00115V"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(áºû¥üÿÿÿÿHÇ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115W"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(½ÙõœHÈ=RCRITICALZ
+CODE_SMELL
+Šsquid:S00115X"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÏÑ›ZHÉ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115Y"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(—ĞàÕHÊ=RCRITICALZ
+CODE_SMELL
+squid:S00115Z"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ì–ô¦ùÿÿÿÿHË=RCRITICALZ
+CODE_SMELL
+‹squid:S00115["ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(”¸Æ…HÌ=RCRITICALZ
+CODE_SMELL
+squid:S00115\"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ìŸÓÙüÿÿÿÿHÍ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115]"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(šß»åHÎ=RCRITICALZ
+CODE_SMELL
+squid:S00115^"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(şÏÅ¿ÿÿÿÿÿHÏ=RCRITICALZ
+CODE_SMELL
+squid:S00115_"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ş„·ŠøÿÿÿÿHĞ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115`"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ú ¢¡HÑ=RCRITICALZ
+CODE_SMELL
+squid:S00115a"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ë§ªÊûÿÿÿÿHÒ=RCRITICALZ
+CODE_SMELL
+squid:S00115b"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(÷§ ØıÿÿÿÿHÓ=RCRITICALZ
+CODE_SMELL
+squid:S00115c"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(²µ˜ìşÿÿÿÿHÔ=RCRITICALZ
+CODE_SMELL
+squid:S00115d"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ş¤ÛºùÿÿÿÿHÕ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115e"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Óİ³HÖ=RCRITICALZ
+CODE_SMELL
+Šsquid:S00115f"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(›Œ¥@H×=RCRITICALZ
+CODE_SMELL
+‹squid:S00115g"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÂÜöğHØ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115h"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(÷‘ï’HÙ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115i"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ñ•ö—HÚ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115j"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(õÂÊ‚HÛ=RCRITICALZ
+CODE_SMELL
+‹squid:S00115k"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‚‡ŸÈHÜ=RCRITICALZ
+CODE_SMELL
+squid:S00115l"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÀØàîúÿÿÿÿHİ=RCRITICALZ
+CODE_SMELL
+squid:S00115m"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ûâ ÀûÿÿÿÿHŞ=RCRITICALZ
+CODE_SMELL
+squid:S00115n"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ê ›”şÿÿÿÿHß=RCRITICALZ
+CODE_SMELL
+squid:S00115o"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ê„ùûÿÿÿÿHà=RCRITICALZ
+CODE_SMELL
+…squid:S00117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÇÚ˜ûÿÿÿÿHá=RMINORZ
+CODE_SMELL
+€squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–·»Hâ=RMINORZ
+CODE_SMELL
+€squid:S00117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±øòËHã=RMINORZ
+CODE_SMELL
+squid:S00117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ®ûNHä=RMINORZ
+CODE_SMELL
+…squid:S00117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êºÇùÿÿÿÿHå=RMINORZ
+CODE_SMELL
+…squid:S00117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜øÁªıÿÿÿÿHæ=RMINORZ
+CODE_SMELL
+gsquid:S1161":Add the "@Override" annotation above this method signature(¸Ï–½Hç=RMAJORZ
+CODE_SMELL
+msquid:S1161¬":Add the "@Override" annotation above this method signature(·ˆàÑøÿÿÿÿHè=RMAJORZ
+CODE_SMELL
+gsquid:S1161Á":Add the "@Override" annotation above this method signature(ôå”tHé=RMAJORZ
+CODE_SMELL
+msquid:S1161É":Add the "@Override" annotation above this method signature(õ¢É®ûÿÿÿÿHê=RMAJORZ
+CODE_SMELL
+msquid:S1161Î":Add the "@Override" annotation above this method signature(µø¯ãşÿÿÿÿHë=RMAJORZ
+CODE_SMELL
+Ssquid:S3457Ö"%String contains no format specifiers.(¸Ÿ—Hì=RMAJORZ
+CODE_SMELL
+Ssquid:S3457à"%String contains no format specifiers.(¸Ÿ—Hí=RMAJORZ
+CODE_SMELL
+|squid:MaximumInheritanceDepthS"=This class has 11 parents which is greater than 5 authorized.(×…ŞHî=RMAJORZ
+CODE_SMELL

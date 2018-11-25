@@ -1,0 +1,50 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.assertTrue;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+
+public class AddressVersioningTest extends PersistenceTesting {
+
+	private EntityManager em;
+
+	@Test
+	public void test() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
+		persist(em, a_v1);
+
+		Address.ID key_v1 = a_v1.getHistKey();
+		Address persA_v1 = em.find(Address.class, key_v1);
+		assertTrue(persA_v1.isHistCurrent());
+
+		Address a_v2 = new Address(a_v1.getCity(), a_v1.getCountry(), a_v1.getProvince(), a_v1.getPostalCode(),
+				a_v1.getStreet());
+		a_v2.setId(a_v1.getId());
+		a_v2.setHistCurrent(true);
+		a_v2.setCountry("AT");
+		merge(em, a_v2);
+		persA_v1 = em.find(Address.class, key_v1);
+		Address persA_v2 = getHistCurrent(em);
+		Address.ID key_v2 = persA_v2.getHistKey();
+		Assert.assertFalse(persA_v1.isHistCurrent());
+		Assert.assertTrue(persA_v2.isHistCurrent());
+
+		a_v1.setCountry("DE");
+		persist(em, a_v1);
+
+		persA_v1 = persA_v1 = em.find(Address.class, key_v1);
+		persA_v2 = em.find(Address.class, key_v2);
+		Address persA_v3 = getHistCurrent(em);
+		
+	}
+
+}

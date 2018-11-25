@@ -1,0 +1,176 @@
+package eclipselink.example.jpa.employee.test;
+
+import java.util.Date;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Test;
+
+import eclipselink.example.jpa.employee.model.Address;
+import eclipselink.example.jpa.employee.model.Employee;
+import eclipselink.example.jpa.employee.model.SamplePopulation;
+import example.JavaSEExample;
+
+public class SimpleHistorizedTests {
+
+	@Test
+	public void testSimple(){
+		EntityManagerFactory emf = PersistenceTesting.createEMF(true);
+        try {
+            EntityManager em = emf.createEntityManager();
+
+
+    		em.getTransaction().begin();
+    		Address adrV1 = createAddress();
+    		em.persist(adrV1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		queryAllAddress(em);
+
+    		Address _adrV1 = getCurrent(em);
+
+    		em.getTransaction().begin();
+    		_adrV1.setCity("MUC");
+    		em.persist(_adrV1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		em.getTransaction().begin();
+    		_adrV1.setCity("HD");
+    		em.persist(_adrV1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		em.getTransaction().begin();
+    		_adrV1.setCity("NY");
+    		em.merge(_adrV1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		Employee emp1 = createRandomEmployee(_adrV1);
+    		em.getTransaction().begin();
+    		em.persist(emp1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		queryAllAddress(em);
+
+    		em.getTransaction().begin();
+    		_adrV1.setValidFrom(new Date().getTime());
+    		em.persist(_adrV1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		queryAllAddress(em);
+
+    		// need to create an insert
+    		//
+    		_adrV1 = em.find(Address.class, new Address.ID(adrV1.getId(), adrV1.getValidFrom()));
+    		em.detach(_adrV1);
+    		em.getTransaction().begin();
+    		_adrV1.setStreet("Blablalba");
+    		em.merge(_adrV1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		_adrV1 = em.find(Address.class, new Address.ID(_adrV1.getId(), _adrV1.getValidFrom()));
+
+    		Employee emp12 = createRandomEmployee(_adrV1);
+    		em.getTransaction().begin();
+    		em.persist(emp12);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		// // update an old version
+    		// Address oldVersion = queryFristAddress(em);
+    		// em.detach(oldVersion);
+    		// oldVersion.setStreet("Foobar");
+    		// em.getTransaction().begin();
+    		// em.merge(oldVersion);
+    		// em.getTransaction().commit();
+    		// em.clear();
+    		emp1 = em.find(Employee.class, emp1.getId());
+    		em.detach(emp1);
+    		emp1.setFirstName("Foo bar foo");
+    		Address adrCurrent = emp1.getAddress();
+    		Address adrNew = adrCurrent.newVersion();
+    		adrNew.setStreet("HD");
+    		emp1.setAddress(adrNew);
+    		em.getTransaction().begin();
+    		em.merge(emp1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		emp1 = em.find(Employee.class, emp1.getId());
+    		em.detach(emp1);
+    		emp1.setFirstName("Foo bar foo");
+    		emp1.getAddress().setStreet("HD2");
+    		em.getTransaction().begin();
+    		em.merge(emp1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		Address addrActive = queryActiveAddress(em);
+    		emp1 = em.find(Employee.class, emp1.getId());
+    		em.detach(emp1);
+    		em.getTransaction().begin();
+    		emp1.setFirstName("Foo bar foo");
+    		emp1.setAddress(addrActive);
+    		em.merge(emp1);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		emp1 = em.find(Employee.class, emp1.getId());
+    		System.out.println(emp1.getAddress().getCity());
+    		
+    		if(!emp1.getAddress().getStreet().equals(addrActive.getStreet())) {
+    			System.out.println("Fehler");
+    		}
+
+    		sleep1();
+
+    		Address addrV3 = queryActiveAddress(em);
+    		addrV3.setCity("NEW YORK");
+    		em.getTransaction().begin();
+    		em.merge(addrV3);
+    		em.getTransaction().commit();
+    		em.clear();
+
+    		sleep1();
+
+    		emp1 = em.find(Employee.class, emp1.getId());
+    		System.out.println(emp1.getAddress().getCity());
+
+    		 sleep1();
+    	
+            
+
+        } finally {
+        	em.close();
+            emf.close();
+        }
+
+	}
+	
+	
+}

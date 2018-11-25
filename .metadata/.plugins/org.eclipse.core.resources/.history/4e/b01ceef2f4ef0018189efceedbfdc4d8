@@ -1,0 +1,61 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.assertTrue;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+
+public class AddressTimedependentTest extends PersistenceTesting {
+
+	private EntityManager em;
+
+	@Test
+	public void testNewVersion() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+
+		clear(em);
+
+		// create Address Version 1
+		//
+
+		Address a_v1 = new Address("Heidelberg", "DE", "Version 1", "69115", "Hebelstrasse");
+		a_v1.setCustomVersion(true);
+		a_v1.setValidFrom(getFromDate(2018, 1, 1).getTime());
+		persist(em, a_v1);
+		Address.ID key_v1 = a_v1.getHistKey();
+
+		Address a_v2 = new Address("Heidelberg", "AT", "Version 2", "69115", "Hebelstrasse");
+		a_v2.setCustomVersion(true);
+		a_v2.setValidFrom(getFromDate(2018, 2, 1).getTime());
+		persist(em, a_v2);
+		Address.ID key_v2 = a_v2.getHistKey();
+
+		Address a_v3 = new Address("Heidelberg", "PL", "Version 3", "69115", "Hebelstrasse");
+		a_v3.setCustomVersion(true);
+		a_v3.setValidFrom(getFromDate(2018, 7, 1).getTime());
+		persist(em, a_v3);
+		Address.ID key_v3 = a_v3.getHistKey();
+
+		Address a_v4 = new Address("Heidelberg", "AU", "Version 4", "69115", "Hebelstrasse");
+		a_v4.setCustomVersion(true);
+		a_v4.setValidFrom(getFromDate(2018, 2, 1).getTime());
+		persist(em, a_v4);
+		Address.ID key_v4 = a_v4.getHistKey();
+
+		Address persA_v1 = em.find(Address.class, key_v1);
+		Address persA_v2 = em.find(Address.class, key_v2);
+		Address persA_v3 = em.find(Address.class, key_v3);
+		Address persA_v4 = em.find(Address.class, key_v4);
+
+		
+		
+		
+	}
+
+}

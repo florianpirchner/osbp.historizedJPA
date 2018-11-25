@@ -9,6 +9,7 @@
 		<class>org.osbp.jpa.historized.tests.entities.Address</class>
 		<class>org.osbp.jpa.historized.tests.entities.Employee</class>
 		<class>org.osbp.jpa.historized.tests.entities.EmployeeManyToOne</class>
+		<class>org.osbp.jpa.historized.tests.entities.EmployeeOneToManyNonCascade</class>
 		<class>org.osbp.jpa.historized.tests.entities.PhoneNumber</class>
 		<class>org.osbp.jpa.historized.tests.entities.EmploymentPeriod</class>
 		<class>org.osbp.jpa.historized.tests.entities.GenderConverter</class>

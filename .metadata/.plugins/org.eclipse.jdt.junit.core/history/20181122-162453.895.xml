@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun org.osbp.jpa.historized.tests.AddressVersioningTest.testNewVersion" project="org.osbp.jpa.historized.tests" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testNewVersion" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="1.458"/>
+</testrun>

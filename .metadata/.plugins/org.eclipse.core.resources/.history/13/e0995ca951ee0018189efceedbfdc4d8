@@ -1,0 +1,17 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.*;
+
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Test;
+
+public class OneToOneCascadeTest extends PersistenceTesting {
+
+	@Test
+	public void test() {
+
+		EntityManagerFactory emf = createEMF(true);
+	}
+
+}

@@ -1,0 +1,77 @@
+package org.osbp.jpa.historized.tests.entities;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.internal.sessions.EmptyRecord;
+import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
+import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.queries.InsertObjectQuery;
+import org.eclipse.persistence.queries.QueryRedirector;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.queries.UpdateObjectQuery;
+import org.eclipse.persistence.queries.WriteObjectQuery;
+import org.eclipse.persistence.sessions.Record;
+import org.eclipse.persistence.sessions.Session;
+import org.eclipse.persistence.sessions.UnitOfWork;
+
+public class AddressHistorizedQueryRedirector implements QueryRedirector {
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public Object invokeQuery(DatabaseQuery query, Record arguments, Session session) {
+		return null;
+	}
+
+	private long createNow(Address addr) {
+		if (addr.isCustomVersion()) {
+			return addr.getValidFrom();
+		}
+		return new Date().getTime();
+	}
+
+	private Address getCurrent(Address addr, AbstractSession session) {
+
+		UnitOfWorkImpl uow = session.acquireNonSynchronizedUnitOfWork();
+
+		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
+
+		ExpressionBuilder eb = rq.getExpressionBuilder();
+		Expression exp = eb.get("id").equal(addr.getId()).and(eb.get("histCurrent").equal(true));
+		rq.setSelectionCriteria(exp);
+		rq.dontCheckCache();
+		rq.dontMaintainCache();
+
+		Address current = (Address) rq.executeInUnitOfWork(uow, EmptyRecord.getEmptyRecord());
+
+		uow.clearForClose(true);
+		return current;
+	}
+
+	private Address getCurrentManaged(Address.ID addrId, AbstractSession session) {
+
+		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
+
+		ExpressionBuilder eb = rq.getExpressionBuilder();
+		Expression exp = eb.get("id").equal(addrId.id).and(eb.get("validFrom").equal(addrId.validFrom));
+		rq.setSelectionCriteria(exp);
+
+		Address current = (Address) rq.execute(session, EmptyRecord.getEmptyRecord());
+
+		return current;
+	}
+
+	private long getMaxDate() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(2099, Calendar.DECEMBER, 31, 0, 0, 0);
+		cal.set(Calendar.MILLISECOND, 0);
+		Date maxDate = cal.getTime();
+		return maxDate.getTime();
+	}
+
+}

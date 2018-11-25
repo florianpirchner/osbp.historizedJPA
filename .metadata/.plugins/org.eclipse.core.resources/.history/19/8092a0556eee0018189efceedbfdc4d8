@@ -1,0 +1,35 @@
+package org.osbp.jpa.historized.tests;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+import org.osbp.jpa.historized.tests.entities.Employee;
+
+public class OneToOneCascade extends PersistenceTesting {
+
+	private EntityManager em;
+
+	@Test
+	public void test() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+
+		clear(em);
+
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
+		persist(em, a_v1);
+
+		Address pers_Av1 = AddressService.getHistCurrent(em);
+
+		Employee e = new Employee();
+		e.setFirstName("Foo");
+		e.setLastName("Bar");
+		e.setAddress(pers_Av1);
+		persist(em, e);
+
+	}
+
+}

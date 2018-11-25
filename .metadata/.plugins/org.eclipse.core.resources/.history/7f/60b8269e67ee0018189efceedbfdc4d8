@@ -1,0 +1,168 @@
+package org.osbp.jpa.historized.tests.entities;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.internal.sessions.EmptyRecord;
+import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
+import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.queries.InsertObjectQuery;
+import org.eclipse.persistence.queries.QueryRedirector;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.queries.WriteObjectQuery;
+import org.eclipse.persistence.sessions.Record;
+import org.eclipse.persistence.sessions.Session;
+
+public class AddressInsertQueryRedirector implements QueryRedirector {
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public Object invokeQuery(DatabaseQuery query, Record arguments, Session session) {
+		WriteObjectQuery insertObjectQuery = (WriteObjectQuery) query;
+
+		DatabaseField validFromDBField = query.getDescriptor().getMappingForAttributeName("validFrom").getField();
+		DatabaseField validUntilDBField = query.getDescriptor().getMappingForAttributeName("validUntil").getField();
+		DatabaseField versionDBField = query.getDescriptor().getMappingForAttributeName("version").getField();
+		DatabaseField histCurrentDBField = query.getDescriptor().getMappingForAttributeName("histCurrent").getField();
+
+		Address addr = (Address) insertObjectQuery.getObject();
+		Address current = getCurrent(addr, (AbstractSession) session);
+
+		if (current == null) {
+			addr.setValidFrom(createNow());
+			addr.setValidUntil(getMaxDate());
+			addr.setHistCurrent(true);
+
+			insertObjectQuery.setDoNotRedirect(true);
+			Object newAdr = insertObjectQuery.execute((AbstractSession) session, (AbstractRecord) arguments);
+			return newAdr;
+		} else {
+
+			// sleep 1ms for min time intervall
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+			}
+			
+			// update the address to be historized
+			long now = createNow();
+
+//			DataModifyQuery updateQuery = (DataModifyQuery) new DataModifyQuery();
+//			SQLUpdateStatement statement = new SQLUpdateStatement();
+//			statement.setTable(query.getDescriptor().getDefaultTable());
+//
+//			ExpressionBuilder eb = new ExpressionBuilder(Address.class);
+//			eb.setQueryClassAndDescriptor(Address.class, query.getDescriptor());
+//			eb.setSession((AbstractSession) session);
+//			Expression whereClause = eb.get("id").equal(addr.getId()).and(eb.get("histCurrent").equal(true));
+//			statement.setWhereClause(whereClause);
+//
+//			AbstractRecord modifyRow = new DatabaseRecord();
+//			modifyRow.put(validUntilDBField, now);
+//			modifyRow.put(histCurrentDBField, false);
+//			statement.setModifyRow(modifyRow);
+//			updateQuery.setModifyRow(modifyRow);
+//			updateQuery.setHasModifyRow(true);
+//			updateQuery.setSQLStatement(statement);
+//			updateQuery.setDoNotRedirect(true);
+////			updateQuery.dontMaintainCache();
+
+			
+//			ReadObjectQuery 
+//			Object updated = ((AbstractSession) session).executeQuery(updateQuery, modifyRow);
+//			
+			
+			currentManaged = getCurrentManaged(current.getHistKey(), session);
+			
+			
+			
+			
+//			current.setHistCurrent(false);
+//			current.setValidUntil(now);
+//			UpdateObjectQuery updateCurrent = new UpdateObjectQuery(current);
+//			updateCurrent.setDoNotRedirect(true);
+//			updateCurrent.setIsUserDefined(true);
+//			updateCurrent.execute((AbstractSession) session, (AbstractRecord) arguments);
+			
+			// AbstractRecord insertRow =
+			// query.getDescriptor().getObjectBuilder().buildRow(addr,
+			// (AbstractSession) session, WriteType.INSERT);
+			// insertRow.put(validFromDBField, now);
+			// insertRow.put(validUntilDBField, getMaxDate());
+			// insertRow.put(histCurrentDBField, true);
+			// insertRow.put(versionDBField, 0);
+
+			// ReadObjectQuery templateQuery = new
+			// ReadObjectQuery(addr.getClass());
+			// templateQuery.setSession((AbstractSession) session);
+			// Object newAddr =
+			// query.getDescriptor().getObjectBuilder().buildObject(templateQuery,
+			// insertRow);
+
+			addr.setValidFrom(now);
+			addr.setValidUntil(getMaxDate());
+			addr.setHistCurrent(true);
+			addr.setVersion(0);
+
+			// insertObjectQuery.checkPrepare((AbstractSession) session,
+			// modifyRow);
+
+			InsertObjectQuery insertObjectQ = new InsertObjectQuery(addr);
+			insertObjectQ.setIsUserDefined(true);
+			insertObjectQ.setDoNotRedirect(true);
+
+			Object newAdr = insertObjectQ.execute((AbstractSession) session, (AbstractRecord) arguments);
+			return newAdr;
+		}
+
+	}
+
+	private long createNow() {
+		return new Date().getTime();
+	}
+
+	private Address getCurrent(Address addr, AbstractSession session) {
+
+		UnitOfWorkImpl uow = session.acquireNonSynchronizedUnitOfWork();
+
+		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
+
+		ExpressionBuilder eb = rq.getExpressionBuilder();
+		Expression exp = eb.get("id").equal(addr.getId()).and(eb.get("histCurrent").equal(true));
+		rq.setSelectionCriteria(exp);
+		rq.dontCheckCache();
+		rq.dontMaintainCache();
+
+		Address current = (Address) rq.executeInUnitOfWork(uow, EmptyRecord.getEmptyRecord());
+
+		uow.clearForClose(true);
+		return current;
+	}
+
+	private Address getCurrentManaged(Address.ID addrId, AbstractSession session) {
+
+		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
+
+		ExpressionBuilder eb = rq.getExpressionBuilder();
+		Expression exp = eb.get("id").equal(addrId.id).and(eb.get("validFrom").equal(addrId.validFrom));
+		rq.setSelectionCriteria(exp);
+
+		Address current = (Address) rq.execute(session, EmptyRecord.getEmptyRecord());
+
+		return current;
+	}
+
+	private long getMaxDate() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(2099, Calendar.DECEMBER, 31, 0, 0, 0);
+		cal.set(Calendar.MILLISECOND, 0);
+		Date maxDate = cal.getTime();
+		return maxDate.getTime();
+	}
+
+}

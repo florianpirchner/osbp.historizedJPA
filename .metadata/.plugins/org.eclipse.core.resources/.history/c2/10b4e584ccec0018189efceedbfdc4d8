@@ -1,0 +1,8 @@
+package eclipselink.example.jpa.employee.test;
+
+import org.junit.Test;
+
+@Test
+public class SimpleHistorizedTests {
+
+}

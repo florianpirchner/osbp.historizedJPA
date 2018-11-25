@@ -1,0 +1,22 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.assertTrue;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+
+public class OneToOneCascade extends PersistenceTesting {
+
+	private EntityManager em;
+
+	@Test
+	public void test() {
+
+
+	}
+
+}

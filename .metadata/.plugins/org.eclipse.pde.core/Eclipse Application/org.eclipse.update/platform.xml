@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1538138436846" transient="false" version="3.0">
+<site enabled="true" policy="USER-EXCLUDE" updateable="true" url="platform:/base/">
+<feature id="org.eclipse.ecf.filetransfer.httpclient4.feature" url="features/org.eclipse.ecf.filetransfer.httpclient4.feature_3.13.2.v20160823-2221/" version="3.13.2.v20160823-2221">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.dto.source" plugin-identifier="org.eclipse.osbp.dsl.entity.xtext.ui" url="features/org.eclipse.osbp.dsl.feature.dto.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.eclipse.persistence" plugin-identifier="org.eclipse.persistence.core" url="features/org.eclipse.osbp.dependencies.feature.eclipse.persistence_2.6.1.201809250935/" version="2.6.1.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.xtext.gridsource.feature.source" plugin-identifier="org.eclipse.osbp.xtext.gridsource" url="features/org.eclipse.osbp.xtext.gridsource.feature.source_0.9.0.201809261737/" version="0.9.0.201809261737">
+</feature>
+<feature id="org.eclipse.osbp.xtext.statemachine.feature.source" url="features/org.eclipse.osbp.xtext.statemachine.feature.source_0.9.0.201809261801/" version="0.9.0.201809261801">
+</feature>
+<feature id="org.eclipse.swtbot" plugin-identifier="org.eclipse.swtbot.eclipse.ui" url="features/org.eclipse.swtbot_2.5.0.201609021837/" version="2.5.0.201609021837">
+</feature>
+<feature id="org.eclipse.egit" url="features/org.eclipse.egit_4.6.1.201703071140-r/" version="4.6.1.201703071140-r">
+</feature>
+<feature id="org.eclipse.wst.common_core.feature" url="features/org.eclipse.wst.common_core.feature_3.8.2.v201701191735/" version="3.8.2.v201701191735">
+</feature>
+<feature id="org.eclipse.osbp.ecview.feature.ide.source" plugin-identifier="org.eclipse.osbp.ecview.dsl.ide" url="features/org.eclipse.osbp.ecview.feature.ide.source_0.9.0.201809261649/" version="0.9.0.201809261649">
+</feature>
+<feature id="org.eclipse.mylyn.commons.identity" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons.identity_1.13.0.v20160630-1702/" version="1.13.0.v20160630-1702">
+</feature>
+<feature id="org.eclipse.emf.ecore.xcore.ui" url="features/org.eclipse.emf.ecore.xcore.ui_1.4.0.v20160526-0606/" version="1.4.0.v20160526-0606">
+</feature>
+<feature id="org.eclipse.osbp.tools.graphical.entity.feature.ui" url="features/org.eclipse.osbp.tools.graphical.entity.feature.ui_0.9.0.201809261818/" version="0.9.0.201809261818">
+</feature>
+<feature id="org.eclipse.emf.ecore.xcore.source" url="features/org.eclipse.emf.ecore.xcore.source_1.4.0.v20160526-0606/" version="1.4.0.v20160526-0606">
+</feature>
+<feature id="org.eclipse.osbp.datainterchange.api.feature" url="features/org.eclipse.osbp.datainterchange.api.feature_0.9.0.201809261703/" version="0.9.0.201809261703">
+</feature>
+<feature id="org.eclipse.osbp.xtext.dialogdsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.dialogdsl" url="features/org.eclipse.osbp.xtext.dialogdsl.feature.source_0.9.0.201809261747/" version="0.9.0.201809261747">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ocl" plugin-identifier="org.eclipse.sirius.common.ocl" url="features/org.eclipse.sirius.runtime.ocl_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="net.osbee.softwarefactory.feature" url="features/net.osbee.softwarefactory.feature_1.0.0.201809280941/" version="1.0.0.201809280941">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.ddl.feature" url="features/org.eclipse.datatools.sqldevtools.ddl.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.mylyn.commons.notifications" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons.notifications_1.13.0.v20160721-2347/" version="1.13.0.v20160721-2347">
+</feature>
+<feature id="org.sonatype.m2e.buildhelper.feature" plugin-identifier="org.sonatype.m2e.buildhelper" url="features/org.sonatype.m2e.buildhelper.feature_0.15.0.201207090124/" version="0.15.0.201207090124">
+</feature>
+<feature id="net.osbee.dependencies.feature.btm" plugin-identifier="bitronix.tm" url="features/net.osbee.dependencies.feature.btm_3.0.0.201809222128/" version="3.0.0.201809222128">
+</feature>
+<feature id="org.eclipse.osbp.utils.functionnormalizer.feature.source" plugin-identifier="org.eclipse.osbp.utils.functionnormalizer" url="features/org.eclipse.osbp.utils.functionnormalizer.feature.source_0.9.0.201809261714/" version="0.9.0.201809261714">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.common.ecview.feature.source" plugin-identifier="org.eclipse.osbp.vaaclipse.common.ecview" url="features/org.eclipse.osbp.vaaclipse.common.ecview.feature.source_0.9.0.201809261719/" version="0.9.0.201809261719">
+</feature>
+<feature id="org.eclipse.datatools.enablement.postgresql.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.postgresql.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.emf.ecore.xcore.lib" url="features/org.eclipse.emf.ecore.xcore.lib_1.2.100.v20160526-0606/" version="1.2.100.v20160526-0606">
+</feature>
+<feature id="net.osbee.technologystack.feature" url="features/net.osbee.technologystack.feature_1.0.0.201809280914/" version="1.0.0.201809280914">
+</feature>
+<feature id="org.eclipse.sirius.runtime.source" url="features/org.eclipse.sirius.runtime.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.sf.feeling.decompiler.cfr" url="features/org.sf.feeling.decompiler.cfr_3.1.0.201807021924/" version="3.1.0.201807021924">
+</feature>
+<feature id="org.eclipse.osbp.xtext.functionlibrary.common.feature.source" plugin-identifier="org.eclipse.osbp.xtext.functionlibrary.common" url="features/org.eclipse.osbp.xtext.functionlibrary.common.feature.source_0.9.0.201809251047/" version="0.9.0.201809251047">
+</feature>
+<feature id="org.sf.feeling.decompiler.jd" url="features/org.sf.feeling.decompiler.jd_3.1.0.201807021924/" version="3.1.0.201807021924">
+</feature>
+<feature id="org.eclipse.osbp.xtext.strategy.feature.source" plugin-identifier="org.eclipse.osbp.xtext.strategy" url="features/org.eclipse.osbp.xtext.strategy.feature.source_0.9.0.201809261741/" version="0.9.0.201809261741">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.vaadin.components" plugin-identifier="org.eclipse.osbp.runtime.web.vaadin.components" url="features/org.eclipse.osbp.runtime.web.feature.vaadin.components_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.osbp.authentication.feature" plugin-identifier="org.eclipse.osbp.authentication" url="features/org.eclipse.osbp.authentication.feature_0.9.0.201809261708/" version="0.9.0.201809261708">
+</feature>
+<feature id="org.eclipse.datatools.enablement.jdbc.feature" plugin-identifier="org.eclipse.datatools.enablement.sybase" url="features/org.eclipse.datatools.enablement.jdbc.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.bpm.api.feature" plugin-identifier="org.eclipse.osbp.bpm.api" url="features/org.eclipse.osbp.bpm.api.feature_0.9.0.201809261704/" version="0.9.0.201809261704">
+</feature>
+<feature id="org.eclipse.emf.mapping" url="features/org.eclipse.emf.mapping_2.9.0.v20160526-0356/" version="2.9.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.birt.report.designer.editor.xml.wtp" plugin-identifier="org.eclipse.birt.report.designer.ui.editor.xml.wtp" url="features/org.eclipse.birt.report.designer.editor.xml.wtp_4.6.0.v201606072122/" version="4.6.0.v201606072122">
+</feature>
+<feature id="org.osbee.datainterchange.feature" url="features/org.osbee.datainterchange.feature_0.9.0.201809280904/" version="0.9.0.201809280904">
+</feature>
+<feature id="org.eclipse.emf.ecore" url="features/org.eclipse.emf.ecore_2.12.0.v20160420-0247/" version="2.12.0.v20160420-0247">
+</feature>
+<feature id="org.eclipse.equinox.p2.user.ui" url="features/org.eclipse.equinox.p2.user.ui_2.2.203.v20170131-1444/" version="2.2.203.v20170131-1444">
+</feature>
+<feature id="org.eclipse.osbp.xtext.reportdsl.feature" plugin-identifier="org.eclipse.osbp.xtext.reportdsl" url="features/org.eclipse.osbp.xtext.reportdsl.feature_0.9.0.201809261744/" version="0.9.0.201809261744">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.results.feature" url="features/org.eclipse.datatools.sqldevtools.results.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.vaadin.common" plugin-identifier="org.eclipse.osbp.runtime.web.vaadin.common" url="features/org.eclipse.osbp.runtime.web.feature.vaadin.common_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.osbp.xtext.datainterchange.feature" plugin-identifier="org.eclipse.osbp.xtext.datainterchange" url="features/org.eclipse.osbp.xtext.datainterchange.feature_0.9.0.201809261724/" version="0.9.0.201809261724">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.eclipse.ui" plugin-identifier="org.eclipse.osbp.dsl.eclipse.ui" url="features/org.eclipse.osbp.dsl.feature.eclipse.ui_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.mylyn.discovery" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.discovery_3.21.0.v20160729-1739/" version="3.21.0.v20160729-1739">
+</feature>
+<feature id="org.osbee.dependencies.feature.apache.cxf" url="features/org.osbee.dependencies.feature.apache.cxf_0.9.0.201809222051/" version="0.9.0.201809222051">
+</feature>
+<feature id="org.eclipse.aether.connector.basic.feature" url="features/org.eclipse.aether.connector.basic.feature_1.0.1.v20141111/" version="1.0.1.v20141111">
+</feature>
+<feature id="org.eclipse.osbp.xtext.addons.feature" plugin-identifier="org.eclipse.osbp.xtext.addons" url="features/org.eclipse.osbp.xtext.addons.feature_0.9.0.201809250957/" version="0.9.0.201809250957">
+</feature>
+<feature id="org.eclipse.datatools.enablement.mysql.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.mysql.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.gmf.runtime.thirdparty" url="features/org.eclipse.gmf.runtime.thirdparty_1.10.0.201606071959/" version="1.10.0.201606071959">
+</feature>
+<feature id="org.eclipse.mylyn.versions" plugin-identifier="org.eclipse.mylyn.versions.core" url="features/org.eclipse.mylyn.versions_1.13.0.v20160630-2022/" version="1.13.0.v20160630-2022">
+</feature>
+<feature id="org.eclipse.emf.mwe2.language.sdk" url="features/org.eclipse.emf.mwe2.language.sdk_2.9.0.v201605261103/" version="2.9.0.v201605261103">
+</feature>
+<feature id="org.eclipse.birt.source" plugin-identifier="org.eclipse.birt" url="features/org.eclipse.birt.source_4.6.0.v201606072122/" version="4.6.0.v201606072122">
+</feature>
+<feature id="org.eclipse.osbp.softwarefactory.feature" url="features/org.eclipse.osbp.softwarefactory.feature_0.9.0.201809280852/" version="0.9.0.201809280852">
+</feature>
+<feature id="org.eclipse.equinox.p2.core.feature" url="features/org.eclipse.equinox.p2.core.feature_1.3.203.v20170131-1444/" version="1.3.203.v20170131-1444">
+</feature>
+<feature id="org.eclipse.emf.mwe2.runtime.sdk" url="features/org.eclipse.emf.mwe2.runtime.sdk_2.9.0.v201605261103/" version="2.9.0.v201605261103">
+</feature>
+<feature id="org.eclipse.osbp.xtext.authorizationdsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.authorizationdsl" url="features/org.eclipse.osbp.xtext.authorizationdsl.feature.source_0.9.0.201809261735/" version="0.9.0.201809261735">
+</feature>
+<feature id="org.eclipse.ecf.filetransfer.ssl.feature" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.0.v20160823-2221/" version="1.1.0.v20160823-2221">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.sqlbuilder.feature" url="features/org.eclipse.datatools.sqldevtools.sqlbuilder.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.mylyn.tasks.ide" plugin-identifier="org.eclipse.mylyn.tasks.core" url="features/org.eclipse.mylyn.tasks.ide_3.21.0.v20160929-1805/" version="3.21.0.v20160929-1805">
+</feature>
+<feature id="org.eclipse.sirius.runtime.acceleo.source" plugin-identifier="org.eclipse.sirius.common.acceleo.mtl" url="features/org.eclipse.sirius.runtime.acceleo.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.emf.edit" url="features/org.eclipse.emf.edit_2.12.0.v20160526-0356/" version="2.12.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ocl.source" plugin-identifier="org.eclipse.sirius.common.ocl" url="features/org.eclipse.sirius.runtime.ocl.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.birt" plugin-identifier="org.eclipse.birt" url="features/org.eclipse.osbp.dependencies.feature.birt_4.6.0.201809250935/" version="4.6.0.201809250935">
+</feature>
+<feature id="org.eclipse.mylyn.commons" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons_3.21.0.v20160707-1856/" version="3.21.0.v20160707-1856">
+</feature>
+<feature id="org.eclipse.osbp.xtext.oxtype.feature.source" plugin-identifier="org.eclipse.osbp.xtext.oxtype" url="features/org.eclipse.osbp.xtext.oxtype.feature.source_0.9.0.201809250953/" version="0.9.0.201809250953">
+</feature>
+<feature id="org.eclipse.mylyn.ide_feature" plugin-identifier="org.eclipse.mylyn.context.core" url="features/org.eclipse.mylyn.ide_feature_3.21.0.v20160912-1820/" version="3.21.0.v20160912-1820">
+</feature>
+<feature id="org.eclipse.emf.databinding.edit" url="features/org.eclipse.emf.databinding.edit_1.4.0.v20160526-0356/" version="1.4.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.assert_utilities" plugin-identifier="org.knowhowlab.osgi.testing.assertions" url="features/org.eclipse.osbp.dependencies.feature.assert_utilities_1.3.0.201809250935/" version="1.3.0.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.tools.feature.ide.source" url="features/org.eclipse.osbp.vaaclipse.tools.feature.ide.source_0.9.0.201809261825/" version="0.9.0.201809261825">
+</feature>
+<feature id="org.osbee.fork.tapiji.feature.source" plugin-identifier="org.eclipselabs.tapiji.translator" url="features/org.osbee.fork.tapiji.feature.source_0.9.0.201809222111/" version="0.9.0.201809222111">
+</feature>
+<feature id="org.eclipse.osbp.autowireHelper.feature.source" plugin-identifier="org.eclipse.osbp.autowireHelper" url="features/org.eclipse.osbp.autowireHelper.feature.source_0.9.0.201809261817/" version="0.9.0.201809261817">
+</feature>
+<feature id="org.eclipse.datatools.connectivity.oda.feature" plugin-identifier="org.eclipse.datatools.connectivity.oda" url="features/org.eclipse.datatools.connectivity.oda.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.mylyn.git" plugin-identifier="org.eclipse.mylyn.versions.core" url="features/org.eclipse.mylyn.git_1.13.0.v20160630-2022/" version="1.13.0.v20160630-2022">
+</feature>
+<feature id="org.eclipse.epp.package.java.feature" plugin-identifier="org.eclipse.epp.package.java" url="features/org.eclipse.epp.package.java.feature_4.6.3.20170314-1500/" version="4.6.3.20170314-1500">
+</feature>
+<feature id="org.eclipse.osbp.ecview.feature.runtime.source" plugin-identifier="org.eclipse.osbp.ecview.dsl" url="features/org.eclipse.osbp.ecview.feature.runtime.source_0.9.0.201809261649/" version="0.9.0.201809261649">
+</feature>
+<feature id="org.osbee.dependencies.feature.apache.servicemix" url="features/org.osbee.dependencies.feature.apache.servicemix_0.9.0.201809222051/" version="0.9.0.201809222051">
+</feature>
+<feature id="org.eclipse.emf.mapping.ui" url="features/org.eclipse.emf.mapping.ui_2.9.0.v20160526-0356/" version="2.9.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.osbp.core.api.feature" plugin-identifier="org.eclipse.osbp.core.api" url="features/org.eclipse.osbp.core.api.feature_0.9.0.201809251516/" version="0.9.0.201809251516">
+</feature>
+<feature id="org.eclipse.equinox.server.core" url="features/org.eclipse.equinox.server.core_1.4.3.v20170209-1843/" version="1.4.3.v20170209-1843">
+</feature>
+<feature id="org.eclipse.osbp.xtext.entitymock.feature" plugin-identifier="org.eclipse.osbp.xtext.entitymock" url="features/org.eclipse.osbp.xtext.entitymock.feature_0.9.0.201809261804/" version="0.9.0.201809261804">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.apache.sshd.core" plugin-identifier="org.apache.sshd.core" url="features/org.eclipse.osbp.dependencies.feature.apache.sshd.core_0.7.0.201809250935/" version="0.7.0.201809250935">
+</feature>
+<feature id="org.sf.feeling.decompiler.procyon" url="features/org.sf.feeling.decompiler.procyon_3.1.0.201807021924/" version="3.1.0.201807021924">
+</feature>
+<feature id="org.eclipse.osbp.report.feature" plugin-identifier="org.eclipse.osbp.report" url="features/org.eclipse.osbp.report.feature_0.9.0.201809261757/" version="0.9.0.201809261757">
+</feature>
+<feature id="org.eclipse.datatools.enablement.ibm.feature" plugin-identifier="org.eclipse.datatools.enablement.ibm" url="features/org.eclipse.datatools.enablement.ibm.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.e4eventmanager" plugin-identifier="org.eclipse.osbp.runtime.event" url="features/org.eclipse.osbp.runtime.feature.e4eventmanager_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="org.eclipse.osbp.autowireHelper.feature" plugin-identifier="org.eclipse.osbp.autowireHelper" url="features/org.eclipse.osbp.autowireHelper.feature_0.9.0.201809261817/" version="0.9.0.201809261817">
+</feature>
+<feature id="org.eclipse.osbp.xtext.table.common.feature.source" plugin-identifier="org.eclipse.osbp.xtext.table.common" url="features/org.eclipse.osbp.xtext.table.common.feature.source_0.9.0.201809261711/" version="0.9.0.201809261711">
+</feature>
+<feature id="net.osbee.softwarefactory.ide.extensions.feature" url="features/net.osbee.softwarefactory.ide.extensions.feature_1.0.0.201809280941/" version="1.0.0.201809280941">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.joda" plugin-identifier="joda-time" url="features/org.eclipse.osbp.dependencies.feature.joda_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.ecf.core.feature" url="features/org.eclipse.ecf.core.feature_1.3.0.v20160823-2221/" version="1.3.0.v20160823-2221">
+</feature>
+<feature id="org.eclipse.osbp.mobile.vaadin.feature.ecview" plugin-identifier="org.eclipse.osbp.mobile.vaadin.ecview.api" url="features/org.eclipse.osbp.mobile.vaadin.feature.ecview_0.9.0.201809261647/" version="0.9.0.201809261647">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.vaadin.components.source" plugin-identifier="org.eclipse.osbp.runtime.web.vaadin.components" url="features/org.eclipse.osbp.runtime.web.feature.vaadin.components.source_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.datatools.connectivity.feature" plugin-identifier="org.eclipse.datatools.connectivity" url="features/org.eclipse.datatools.connectivity.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.entities.headless.source" url="features/org.eclipse.osbp.dsl.feature.entities.headless.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.xtext.datamart.common.feature" plugin-identifier="org.eclipse.osbp.xtext.datamart.common" url="features/org.eclipse.osbp.xtext.datamart.common.feature_0.9.0.201809261705/" version="0.9.0.201809261705">
+</feature>
+<feature id="org.eclipse.emf.ecore.xcore.ui.source" url="features/org.eclipse.emf.ecore.xcore.ui.source_1.4.0.v20160526-0606/" version="1.4.0.v20160526-0606">
+</feature>
+<feature id="org.eclipse.osbp.preferences.feature" plugin-identifier="org.eclipse.osbp.preferences" url="features/org.eclipse.osbp.preferences.feature_0.9.0.201809261614/" version="0.9.0.201809261614">
+</feature>
+<feature id="org.eclipse.osbp.ecview.core.feature.core" plugin-identifier="org.eclipse.osbp.ecview.core.common" url="features/org.eclipse.osbp.ecview.core.feature.core_0.9.0.201809261635/" version="0.9.0.201809261635">
+</feature>
+<feature id="org.eclipse.osbp.ide.feature.headless.source" plugin-identifier="org.eclipse.osbp.ide.core" url="features/org.eclipse.osbp.ide.feature.headless.source_0.9.0.201809261642/" version="0.9.0.201809261642">
+</feature>
+<feature id="org.eclipse.xtext.xbase.lib" url="features/org.eclipse.xtext.xbase.lib_2.11.0.v20170124-1424/" version="2.11.0.v20170124-1424">
+</feature>
+<feature id="org.eclipse.gmf" url="features/org.eclipse.gmf_1.10.0.201606071959/" version="1.10.0.201606071959">
+</feature>
+<feature id="org.eclipse.buildship" plugin-identifier="org.eclipse.buildship.branding" url="features/org.eclipse.buildship_1.0.21.v20161010-1640/" version="1.0.21.v20161010-1640">
+</feature>
+<feature id="org.eclipse.wst.xml_core.feature" url="features/org.eclipse.wst.xml_core.feature_3.8.2.v201702270442/" version="3.8.2.v201702270442">
+</feature>
+<feature id="org.eclipse.osbp.bpmn2.ecore.feature.source" plugin-identifier="org.eclipse.osbp.bpmn2.ecore" url="features/org.eclipse.osbp.bpmn2.ecore.feature.source_0.9.0.201809261718/" version="0.9.0.201809261718">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.equinox" url="features/org.eclipse.osbp.dependencies.feature.equinox_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.xtext.datainterchange.feature.source" plugin-identifier="org.eclipse.osbp.xtext.datainterchange" url="features/org.eclipse.osbp.xtext.datainterchange.feature.source_0.9.0.201809261724/" version="0.9.0.201809261724">
+</feature>
+<feature id="org.eclipse.osbp.fork.jpos.feature" plugin-identifier="org.eclipse.osbp.fork.jpos" url="features/org.eclipse.osbp.fork.jpos.feature_1.14.0.201809221837/" version="1.14.0.201809221837">
+</feature>
+<feature id="org.eclipse.datatools.enablement.hsqldb.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.hsqldb.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.xtext.datamart.common.feature.source" plugin-identifier="org.eclipse.osbp.xtext.datamart.common" url="features/org.eclipse.osbp.xtext.datamart.common.feature.source_0.9.0.201809261705/" version="0.9.0.201809261705">
+</feature>
+<feature id="org.eclipse.osbp.utils.ui.feature" plugin-identifier="org.eclipse.osbp.utils.ui" url="features/org.eclipse.osbp.utils.ui.feature_0.9.0.201809261709/" version="0.9.0.201809261709">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ide.eef.source" plugin-identifier="org.eclipse.sirius.eef.adapters" url="features/org.eclipse.sirius.runtime.ide.eef.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.osbp.utils.feature.source" plugin-identifier="org.eclipse.osbp.utils" url="features/org.eclipse.osbp.utils.feature.source_0.9.0.201809261658/" version="0.9.0.201809261658">
+</feature>
+<feature id="org.eclipse.emf.edit.ui" url="features/org.eclipse.emf.edit.ui_2.12.0.v20160526-0356/" version="2.12.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.rcp" url="features/org.eclipse.rcp_4.6.3.v20170301-0400/" version="4.6.3.v20170301-0400">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.xtend" plugin-identifier="org.eclipse.xtend.lib" url="features/org.eclipse.osbp.dependencies.feature.xtend_2.11.0.201809250935/" version="2.11.0.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.resolverhooks.source" plugin-identifier="org.eclipse.osbp.runtime.systemextension" url="features/org.eclipse.osbp.runtime.feature.resolverhooks.source_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="org.eclipse.osbp.xtext.action.feature" plugin-identifier="org.eclipse.osbp.xtext" url="features/org.eclipse.osbp.xtext.action.feature_0.9.0.201809261733/" version="0.9.0.201809261733">
+</feature>
+<feature id="org.osbee.technologystack.feature.source" url="features/org.osbee.technologystack.feature.source_0.9.0.201809280900/" version="0.9.0.201809280900">
+</feature>
+<feature id="org.osbee.fork.csvedit.feature.source" plugin-identifier="org.osbee.fork.csvedit" url="features/org.osbee.fork.csvedit.feature.source_1.2.1.201809280905/" version="1.2.1.201809280905">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.beanvalidation" plugin-identifier="org.apache.bval.org.apache.bval.bundle" url="features/org.eclipse.osbp.dependencies.feature.beanvalidation_0.5.0.201809250935/" version="0.5.0.201809250935">
+</feature>
+<feature id="org.eclipse.mylyn.commons.repositories.http" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons.repositories.http_1.13.0.v20160630-1702/" version="1.13.0.v20160630-1702">
+</feature>
+<feature id="org.eclipse.datatools.enablement.apache.derby.feature" plugin-identifier="org.eclipse.datatools.enablement.sybase" url="features/org.eclipse.datatools.enablement.apache.derby.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.common.ecview.feature" plugin-identifier="org.eclipse.osbp.vaaclipse.common.ecview" url="features/org.eclipse.osbp.vaaclipse.common.ecview.feature_0.9.0.201809261719/" version="0.9.0.201809261719">
+</feature>
+<feature id="org.eclipse.osbp.utils.themes.ui.feature.source" plugin-identifier="org.eclipse.osbp.utils.themes.ui" url="features/org.eclipse.osbp.utils.themes.ui.feature.source_0.9.0.201809261710/" version="0.9.0.201809261710">
+</feature>
+<feature id="org.eclipse.osbp.datainterchange.api.feature.source" url="features/org.eclipse.osbp.datainterchange.api.feature.source_0.9.0.201809261703/" version="0.9.0.201809261703">
+</feature>
+<feature id="org.eclipse.osbp.xtext.topologydsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.topologydsl" url="features/org.eclipse.osbp.xtext.topologydsl.feature.source_0.9.0.201809261753/" version="0.9.0.201809261753">
+</feature>
+<feature id="org.eclipse.osbp.display.api.feature" url="features/org.eclipse.osbp.display.api.feature_0.9.0.201809251118/" version="0.9.0.201809251118">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.e4tools" plugin-identifier="org.eclipse.e4.tools" url="features/org.eclipse.osbp.dependencies.feature.e4tools_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.blob.feature.source" url="features/org.eclipse.osbp.blob.feature.source_0.9.0.201809261639/" version="0.9.0.201809261639">
+</feature>
+<feature id="org.sf.feeling.decompiler.source" url="features/org.sf.feeling.decompiler.source_3.1.0.201807021924/" version="3.1.0.201807021924">
+</feature>
+<feature id="org.osbee.dependencies.feature.drools.editor" url="features/org.osbee.dependencies.feature.drools.editor_5.5.0.201809222051/" version="5.5.0.201809222051">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.feature" plugin-identifier="org.eclipse.datatools.sqltools.common.ui" url="features/org.eclipse.datatools.sqldevtools.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.oomph.setup" url="features/org.eclipse.oomph.setup_1.7.0.v20170305-1123/" version="1.7.0.v20170305-1123">
+</feature>
+<feature id="org.eclipse.bpmn2.modeler.runtime.jboss" url="features/org.eclipse.bpmn2.modeler.runtime.jboss_1.3.3.Final-v20170221-1647-B60/" version="1.3.3.Final-v20170221-1647-B60">
+</feature>
+<feature id="org.eclipse.osbp.mondrian.api.feature" plugin-identifier="org.eclipse.osbp.mondrian.api" url="features/org.eclipse.osbp.mondrian.api.feature_0.9.0.201809251514/" version="0.9.0.201809251514">
+</feature>
+<feature id="org.eclipse.xtext.examples" url="features/org.eclipse.xtext.examples_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="net.osbee.wizard.ui.templategenerator.feature" plugin-identifier="net.osbee.wizard.ui.templategenerator" url="features/net.osbee.wizard.ui.templategenerator.feature_1.0.0.201809280936/" version="1.0.0.201809280936">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.mondrian" plugin-identifier="mondrian.osgi" url="features/org.eclipse.osbp.dependencies.feature.mondrian_3.5.0.201809250935/" version="3.5.0.201809250935">
+</feature>
+<feature id="org.eclipse.platform" url="features/org.eclipse.platform_4.6.3.v20170301-0400/" version="4.6.3.v20170301-0400">
+</feature>
+<feature id="org.eclipse.epp.logging.aeri.feature" url="features/org.eclipse.epp.logging.aeri.feature_2.0.4.v20170307-1435/" version="2.0.4.v20170307-1435">
+</feature>
+<feature id="org.eclipse.osbp.ecview.extension.api.feature" plugin-identifier="org.eclipse.osbp.ecview.extension.api" url="features/org.eclipse.osbp.ecview.extension.api.feature_0.9.0.201809261640/" version="0.9.0.201809261640">
+</feature>
+<feature id="org.eclipse.emf.ecore.edit" url="features/org.eclipse.emf.ecore.edit_2.9.0.v20160526-0356/" version="2.9.0.v20160526-0356">
+</feature>
+<feature id="net.osbee.dependencies.feature.google.api.translate" plugin-identifier="com.google.api.translate.osgi" url="features/net.osbee.dependencies.feature.google.api.translate_0.97.0.201809222128/" version="0.97.0.201809222128">
+</feature>
+<feature id="org.eclipse.emf.mapping.ecore" url="features/org.eclipse.emf.mapping.ecore_2.9.0.v20160526-0356/" version="2.9.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.swtbot.forms" plugin-identifier="org.eclipse.swtbot.eclipse.ui" url="features/org.eclipse.swtbot.forms_2.5.0.201609021837/" version="2.5.0.201609021837">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.dto" plugin-identifier="org.eclipse.osbp.dsl.entity.xtext.ui" url="features/org.eclipse.osbp.dsl.feature.dto_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.xtext.builder.feature.ui.access" plugin-identifier="org.eclipse.osbp.xtext.builder.ui.access" url="features/org.eclipse.osbp.xtext.builder.feature.ui.access_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.xtext.addons.feature.source" plugin-identifier="org.eclipse.osbp.xtext.addons" url="features/org.eclipse.osbp.xtext.addons.feature.source_0.9.0.201809250957/" version="0.9.0.201809250957">
+</feature>
+<feature id="org.eclipse.sirius.tests.support" plugin-identifier="org.eclipse.sirius.tests.junit.support" url="features/org.eclipse.sirius.tests.support_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.birt" url="features/org.eclipse.birt_4.6.0.v201606072122/" version="4.6.0.v201606072122">
+</feature>
+<feature id="org.eclipse.osbp.ide.core.ui.softwarefactory.feature.source" plugin-identifier="org.eclipse.osbp.ide.core.ui.softwarefactory" url="features/org.eclipse.osbp.ide.core.ui.softwarefactory.feature.source_0.9.0.201809261812/" version="0.9.0.201809261812">
+</feature>
+<feature id="org.eclipse.m2e.logback.feature" plugin-identifier="org.eclipse.m2e.logback.configuration" url="features/org.eclipse.m2e.logback.feature_1.7.0.20160603-1933/" version="1.7.0.20160603-1933">
+</feature>
+<feature id="org.eclipse.wst.xml_ui.feature" plugin-identifier="org.eclipse.wst.xml.ui" url="features/org.eclipse.wst.xml_ui.feature_3.8.2.v201702270442/" version="3.8.2.v201702270442">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.common.headless" url="features/org.eclipse.osbp.dsl.feature.common.headless_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.uomo" plugin-identifier="org.unitsofmeasurement.unit-api" url="features/org.eclipse.osbp.dependencies.feature.uomo_0.6.0.201809250935/" version="0.6.0.201809250935">
+</feature>
+<feature id="org.eclipse.emf" url="features/org.eclipse.emf_2.12.0.v20160526-0356/" version="2.12.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.datatools.doc.user" url="features/org.eclipse.datatools.doc.user_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.xtext.oxtype.feature" plugin-identifier="org.eclipse.osbp.xtext.oxtype" url="features/org.eclipse.osbp.xtext.oxtype.feature_0.9.0.201809250953/" version="0.9.0.201809250953">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.feature.core.source" url="features/org.eclipse.osbp.vaaclipse.feature.core.source_0.9.0.201809261659/" version="0.9.0.201809261659">
+</feature>
+<feature id="org.eclipse.osbp.abstractstatemachine.feature.source" plugin-identifier="org.eclipse.osbp.abstractstatemachine" url="features/org.eclipse.osbp.abstractstatemachine.feature.source_0.9.0.201809261757/" version="0.9.0.201809261757">
+</feature>
+<feature id="org.eclipse.osbp.report.feature.source" plugin-identifier="org.eclipse.osbp.report" url="features/org.eclipse.osbp.report.feature.source_0.9.0.201809261757/" version="0.9.0.201809261757">
+</feature>
+<feature id="net.osbee.utils.js.feature" plugin-identifier="net.osbee.utils.js" url="features/net.osbee.utils.js.feature_1.0.0.201809280936/" version="1.0.0.201809280936">
+</feature>
+<feature id="org.eclipse.osbp.ui.api.feature.source" plugin-identifier="org.eclipse.osbp.ui.api" url="features/org.eclipse.osbp.ui.api.feature.source_0.9.0.201809261638/" version="0.9.0.201809261638">
+</feature>
+<feature id="org.eclipse.emf.eef.runtime-feature" plugin-identifier="org.eclipse.emf.eef.branding" url="features/org.eclipse.emf.eef.runtime-feature_1.5.1.201601141612/" version="1.5.1.201601141612">
+</feature>
+<feature id="org.eclipse.draw2d" url="features/org.eclipse.draw2d_3.10.100.201606061308/" version="3.10.100.201606061308">
+</feature>
+<feature id="org.eclipse.xtext.runtime" url="features/org.eclipse.xtext.runtime_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="org.eclipse.osbp.webserver.messagequeue.feature.source" plugin-identifier="org.eclipse.osbp.webserver.messagequeue" url="features/org.eclipse.osbp.webserver.messagequeue.feature.source_0.9.0.201809250952/" version="0.9.0.201809250952">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.quartz" url="features/org.eclipse.osbp.dependencies.feature.quartz_2.2.1.201809250935/" version="2.2.1.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.xtext.menu.feature" plugin-identifier="org.eclipse.osbp.xtext.menu" url="features/org.eclipse.osbp.xtext.menu.feature_0.9.0.201809261759/" version="0.9.0.201809261759">
+</feature>
+<feature id="org.eclipse.osbp.license.feature.source" url="features/org.eclipse.osbp.license.feature.source_0.9.0.201809221823/" version="0.9.0.201809221823">
+</feature>
+<feature id="org.eclipse.osbp.bpm.feature" url="features/org.eclipse.osbp.bpm.feature_0.9.0.201809261711/" version="0.9.0.201809261711">
+</feature>
+<feature id="org.eclipse.osbp.ecview.core.feature.core.source" plugin-identifier="org.eclipse.osbp.ecview.core.common" url="features/org.eclipse.osbp.ecview.core.feature.core.source_0.9.0.201809261635/" version="0.9.0.201809261635">
+</feature>
+<feature id="org.osbee.datainterchange.feature.source" url="features/org.osbee.datainterchange.feature.source_0.9.0.201809280904/" version="0.9.0.201809280904">
+</feature>
+<feature id="org.eclipse.osbp.ide.logger.feature.source" plugin-identifier="org.eclipse.osbp.ide.logger" url="features/org.eclipse.osbp.ide.logger.feature.source_0.9.0.201809251153/" version="0.9.0.201809251153">
+</feature>
+<feature id="org.eclipse.wb.core.java.feature" url="features/org.eclipse.wb.core.java.feature_1.9.0/" version="1.9.0">
+</feature>
+<feature id="org.eclipse.osbp.themes.feature" plugin-identifier="org.eclipse.osbp.themes" url="features/org.eclipse.osbp.themes.feature_0.9.0.201809261820/" version="0.9.0.201809261820">
+</feature>
+<feature id="org.eclipse.osbp.xtext.organizationdsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.organizationdsl" url="features/org.eclipse.osbp.xtext.organizationdsl.feature.source_0.9.0.201809261751/" version="0.9.0.201809261751">
+</feature>
+<feature id="org.eclipse.osbp.xtext.entitymock.common.feature" plugin-identifier="org.eclipse.osbp.xtext.entitymock.common" url="features/org.eclipse.osbp.xtext.entitymock.common.feature_0.9.0.201809261705/" version="0.9.0.201809261705">
+</feature>
+<feature id="org.eclipse.equinox.p2.rcp.feature" url="features/org.eclipse.equinox.p2.rcp.feature_1.2.203.v20170131-1444/" version="1.2.203.v20170131-1444">
+</feature>
+<feature id="org.eclipse.emf.eef.codegen.ecore-feature" plugin-identifier="org.eclipse.emf.eef.branding" url="features/org.eclipse.emf.eef.codegen.ecore-feature_1.5.1.201601141612/" version="1.5.1.201601141612">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.activemq" plugin-identifier="activemq-all-osgi" url="features/org.eclipse.osbp.dependencies.feature.activemq_5.14.5.201809250935/" version="5.14.5.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.tools.feature.ide" url="features/org.eclipse.osbp.vaaclipse.tools.feature.ide_0.9.0.201809261825/" version="0.9.0.201809261825">
+</feature>
+<feature id="org.eclipse.osbp.fork.mihalis.opal.imageSelector.osgi.feature.source" plugin-identifier="org.eclipse.osbp.fork.mihalis.opal.imageSelector.osgi" url="features/org.eclipse.osbp.fork.mihalis.opal.imageSelector.osgi.feature.source_0.9.0.201809261720/" version="0.9.0.201809261720">
+</feature>
+<feature id="org.eclipse.xtext.ui" url="features/org.eclipse.xtext.ui_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="org.eclipse.sirius.specifier.ide.ui.acceleo.source" plugin-identifier="org.eclipse.sirius.common.acceleo.mtl.ide" url="features/org.eclipse.sirius.specifier.ide.ui.acceleo.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.osbee.softwarefactory.feature" url="features/org.osbee.softwarefactory.feature_0.9.0.201809280907/" version="0.9.0.201809280907">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.ecview.presentation.vaadin" plugin-identifier="org.eclipse.osbp.runtime.web.ecview.presentation.vaadin" url="features/org.eclipse.osbp.runtime.web.feature.ecview.presentation.vaadin_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.recommenders.snipmatch.rcp.feature" plugin-identifier="org.eclipse.recommenders.snipmatch.rcp" url="features/org.eclipse.recommenders.snipmatch.rcp.feature_2.4.6.v20170307-1041/" version="2.4.6.v20170307-1041">
+</feature>
+<feature id="org.sf.feeling.decompiler" url="features/org.sf.feeling.decompiler_3.1.0.201807021924/" version="3.1.0.201807021924">
+</feature>
+<feature id="org.eclipse.e4.core.tools.feature" url="features/org.eclipse.e4.core.tools.feature_4.5.100.v20170131-1452/" version="4.5.100.v20170131-1452">
+</feature>
+<feature id="org.eclipse.osbp.xtext.menu.feature.source" plugin-identifier="org.eclipse.osbp.xtext.menu" url="features/org.eclipse.osbp.xtext.menu.feature.source_0.9.0.201809261759/" version="0.9.0.201809261759">
+</feature>
+<feature id="org.eclipse.osbp.infogrid.feature" url="features/org.eclipse.osbp.infogrid.feature_0.9.0.201809261729/" version="0.9.0.201809261729">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.jsr303.validation.source" plugin-identifier="org.eclipse.osbp.runtime.jsr303.validation" url="features/org.eclipse.osbp.runtime.feature.jsr303.validation.source_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="org.eclipse.xtext.redist" url="features/org.eclipse.xtext.redist_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="org.eclipse.pde" url="features/org.eclipse.pde_3.12.3.v20170301-0400/" version="3.12.3.v20170301-0400">
+</feature>
+<feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature" url="features/org.eclipse.ecf.filetransfer.httpclient4.ssl.feature_1.1.0.v20160823-2221/" version="1.1.0.v20160823-2221">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.parsers.feature" plugin-identifier="org.eclipse.datatools.sqltools.parsers.sql" url="features/org.eclipse.datatools.sqldevtools.parsers.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.mylyn.java_feature" plugin-identifier="org.eclipse.mylyn.context.core" url="features/org.eclipse.mylyn.java_feature_3.21.0.v20160701-1337/" version="3.21.0.v20160701-1337">
+</feature>
+<feature id="org.eclipse.xtext.xtext.ui" url="features/org.eclipse.xtext.xtext.ui_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.eclipse.ui.source" plugin-identifier="org.eclipse.osbp.dsl.eclipse.ui" url="features/org.eclipse.osbp.dsl.feature.eclipse.ui.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.ddlgen.feature" plugin-identifier="org.eclipse.datatools.sqltools.ddlgen.ui" url="features/org.eclipse.datatools.sqldevtools.ddlgen.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.common.source" plugin-identifier="org.eclipse.osbp.runtime.common" url="features/org.eclipse.osbp.runtime.feature.common.source_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="org.eclipse.sirius.specifier.ide.ui.acceleo" plugin-identifier="org.eclipse.sirius.common.acceleo.mtl.ide" url="features/org.eclipse.sirius.specifier.ide.ui.acceleo_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.sirius.runtime" plugin-identifier="org.eclipse.sirius" url="features/org.eclipse.sirius.runtime_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.mylyn.monitor" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.monitor_3.21.0.v20160630-1702/" version="3.21.0.v20160630-1702">
+</feature>
+<feature id="org.eclipse.emf.mwe2.launcher.source" url="features/org.eclipse.emf.mwe2.launcher.source_2.9.0.v201605261103/" version="2.9.0.v201605261103">
+</feature>
+<feature id="org.eclipse.m2e.sdk.feature" url="features/org.eclipse.m2e.sdk.feature_1.7.0.20160603-1933/" version="1.7.0.20160603-1933">
+</feature>
+<feature id="org.eclipse.osbp.xtext.cubedsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.cubedsl" url="features/org.eclipse.osbp.xtext.cubedsl.feature.source_0.9.0.201809261727/" version="0.9.0.201809261727">
+</feature>
+<feature id="org.eclipse.emf.codegen.ecore.ui" url="features/org.eclipse.emf.codegen.ecore.ui_2.12.0.v20160526-0356/" version="2.12.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.emf.ecore.editor" url="features/org.eclipse.emf.ecore.editor_2.12.0.v20160526-0356/" version="2.12.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.mylyn.context_feature" plugin-identifier="org.eclipse.mylyn.context.core" url="features/org.eclipse.mylyn.context_feature_3.21.0.v20160815-2336/" version="3.21.0.v20160815-2336">
+</feature>
+<feature id="org.eclipse.emf.ecoretools.sdk" url="features/org.eclipse.emf.ecoretools.sdk_3.2.0.201610181347/" version="3.2.0.201610181347">
+</feature>
+<feature id="org.eclipse.equinox.core.feature" url="features/org.eclipse.equinox.core.feature_1.3.3.v20170209-1843/" version="1.3.3.v20170209-1843">
+</feature>
+<feature id="org.eclipse.emf.eef.edt-feature" plugin-identifier="org.eclipse.emf.eef.branding" url="features/org.eclipse.emf.eef.edt-feature_1.5.1.201601141612/" version="1.5.1.201601141612">
+</feature>
+<feature id="org.eclipse.help" plugin-identifier="org.eclipse.help.base" url="features/org.eclipse.help_2.2.2.v20170301-0400/" version="2.2.2.v20170301-0400">
+</feature>
+<feature id="org.eclipse.osbp.abstractstatemachine.feature" plugin-identifier="org.eclipse.osbp.abstractstatemachine" url="features/org.eclipse.osbp.abstractstatemachine.feature_0.9.0.201809261757/" version="0.9.0.201809261757">
+</feature>
+<feature id="org.eclipse.wb.core.feature" plugin-identifier="org.eclipse.wb.core" url="features/org.eclipse.wb.core.feature_1.9.0/" version="1.9.0">
+</feature>
+<feature id="org.eclipse.osbp.utils.ui.feature.source" plugin-identifier="org.eclipse.osbp.utils.ui" url="features/org.eclipse.osbp.utils.ui.feature.source_0.9.0.201809261709/" version="0.9.0.201809261709">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ide.ui" plugin-identifier="org.eclipse.sirius.common.ui" url="features/org.eclipse.sirius.runtime.ide.ui_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.mylyn.bugzilla_feature" plugin-identifier="org.eclipse.mylyn.tasks.core" url="features/org.eclipse.mylyn.bugzilla_feature_3.21.0.v20160909-1813/" version="3.21.0.v20160909-1813">
+</feature>
+<feature id="org.eclipse.bpmn2.modeler.examples" url="features/org.eclipse.bpmn2.modeler.examples_1.3.3.Final-v20170221-1647-B60/" version="1.3.3.Final-v20170221-1647-B60">
+</feature>
+<feature id="org.eclipse.mylyn_feature" plugin-identifier="org.eclipse.mylyn.tasks.core" url="features/org.eclipse.mylyn_feature_3.21.0.v20160914-0252/" version="3.21.0.v20160914-0252">
+</feature>
+<feature id="org.eclipse.emf.ecoretools.design" url="features/org.eclipse.emf.ecoretools.design_3.2.0.201610181347/" version="3.2.0.201610181347">
+</feature>
+<feature id="org.eclipse.osbp.softwarefactory.feature.source" url="features/org.eclipse.osbp.softwarefactory.feature.source_0.9.0.201809280852/" version="0.9.0.201809280852">
+</feature>
+<feature id="org.eclipse.osbp.display.api.feature.source" url="features/org.eclipse.osbp.display.api.feature.source_0.9.0.201809251118/" version="0.9.0.201809251118">
+</feature>
+<feature id="org.eclipse.ecf.core.ssl.feature" url="features/org.eclipse.ecf.core.ssl.feature_1.1.0.v20160823-2221/" version="1.1.0.v20160823-2221">
+</feature>
+<feature id="org.eclipse.aether.maven.feature" plugin-identifier="org.eclipse.aether.maven" url="features/org.eclipse.aether.maven.feature_3.1.0.20140706-2237/" version="3.1.0.20140706-2237">
+</feature>
+<feature id="org.eclipse.sirius.specifier.ide.ui" plugin-identifier="org.eclipse.sirius.editor" url="features/org.eclipse.sirius.specifier.ide.ui_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.gef" url="features/org.eclipse.gef_3.11.0.201606061308/" version="3.11.0.201606061308">
+</feature>
+<feature id="org.eclipse.osbp.xtext.table.common.feature" plugin-identifier="org.eclipse.osbp.xtext.table.common" url="features/org.eclipse.osbp.xtext.table.common.feature_0.9.0.201809261711/" version="0.9.0.201809261711">
+</feature>
+<feature id="org.eclipse.bpmn2.modeler" url="features/org.eclipse.bpmn2.modeler_1.3.3.Final-v20170221-1647-B60/" version="1.3.3.Final-v20170221-1647-B60">
+</feature>
+<feature id="org.eclipse.osbp.xtext.entitymock.common.feature.source" plugin-identifier="org.eclipse.osbp.xtext.entitymock.common" url="features/org.eclipse.osbp.xtext.entitymock.common.feature.source_0.9.0.201809261705/" version="0.9.0.201809261705">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.misc.mbp" url="features/org.eclipse.osbp.dependencies.feature.misc.mbp_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.oomph.p2" url="features/org.eclipse.oomph.p2_1.7.0.v20170228-1751/" version="1.7.0.v20170228-1751">
+</feature>
+<feature id="org.eclipse.emf.codegen.ui" url="features/org.eclipse.emf.codegen.ui_2.8.0.v20160526-0356/" version="2.8.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.datatools.enablement.sqlite.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.sqlite.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.wizard.ui.feature" plugin-identifier="org.eclipse.osbp.wizard.ui" url="features/org.eclipse.osbp.wizard.ui.feature_0.9.0.201809261814/" version="0.9.0.201809261814">
+</feature>
+<feature id="org.eclipse.emf.converter" url="features/org.eclipse.emf.converter_2.11.0.v20160526-0356/" version="2.11.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.osbp.xtext.entitymock.feature.source" plugin-identifier="org.eclipse.osbp.xtext.entitymock" url="features/org.eclipse.osbp.xtext.entitymock.feature.source_0.9.0.201809261804/" version="0.9.0.201809261804">
+</feature>
+<feature id="org.eclipse.recommenders.rcp.feature" plugin-identifier="org.eclipse.recommenders.rcp" url="features/org.eclipse.recommenders.rcp.feature_2.4.6.v20170307-1041/" version="2.4.6.v20170307-1041">
+</feature>
+<feature id="org.eclipse.osbp.osgi.hybrid.api.feature" plugin-identifier="org.eclipse.osbp.osgi.hybrid.api" url="features/org.eclipse.osbp.osgi.hybrid.api.feature_0.9.0.201809261717/" version="0.9.0.201809261717">
+</feature>
+<feature id="org.eclipse.ecf.filetransfer.feature" url="features/org.eclipse.ecf.filetransfer.feature_3.13.2.v20160823-2221/" version="3.13.2.v20160823-2221">
+</feature>
+<feature id="org.eclipse.emf.workspace" url="features/org.eclipse.emf.workspace_1.10.0.201606071900/" version="1.10.0.201606071900">
+</feature>
+<feature id="org.eclipse.datatools.enablement.oda.designer.feature" plugin-identifier="org.eclipse.datatools.enablement.oda.xml.ui" url="features/org.eclipse.datatools.enablement.oda.designer.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.license.feature" url="features/org.eclipse.osbp.license.feature_0.9.0.201809221823/" version="0.9.0.201809221823">
+</feature>
+<feature id="org.eclipse.osbp.utils.feature" plugin-identifier="org.eclipse.osbp.utils" url="features/org.eclipse.osbp.utils.feature_0.9.0.201809261658/" version="0.9.0.201809261658">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.vaadin.databinding" plugin-identifier="org.eclipse.osbp.runtime.web.vaadin.databinding" url="features/org.eclipse.osbp.runtime.web.feature.vaadin.databinding_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.osbp.utils.ui.classloaderservice.feature.source" plugin-identifier="org.eclipse.osbp.utils.ui.classloaderservice" url="features/org.eclipse.osbp.utils.ui.classloaderservice.feature.source_0.9.0.201809261817/" version="0.9.0.201809261817">
+</feature>
+<feature id="org.eclipse.aether.feature" url="features/org.eclipse.aether.feature_1.0.1.v20141111/" version="1.0.1.v20141111">
+</feature>
+<feature id="org.eclipse.osbp.xtext.blip.feature" plugin-identifier="org.eclipse.osbp.xtext.blip" url="features/org.eclipse.osbp.xtext.blip.feature_0.9.0.201809261721/" version="0.9.0.201809261721">
+</feature>
+<feature id="org.eclipse.emf.ecore.xcore.sdk" url="features/org.eclipse.emf.ecore.xcore.sdk_1.4.0.v20160526-0606/" version="1.4.0.v20160526-0606">
+</feature>
+<feature id="org.eclipse.datatools.connectivity.oda.designer.core.feature" plugin-identifier="org.eclipse.datatools.connectivity.oda.design.ui" url="features/org.eclipse.datatools.connectivity.oda.designer.core.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.eventbroker.feature" plugin-identifier="org.eclipse.osbp.eventbroker" url="features/org.eclipse.osbp.eventbroker.feature_0.9.0.201809261657/" version="0.9.0.201809261657">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.apache.mina.core" plugin-identifier="org.apache.mina.core" url="features/org.eclipse.osbp.dependencies.feature.apache.mina.core_2.0.7.201809250935/" version="2.0.7.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.xtext.chart.feature.source" plugin-identifier="org.ecclipse.osbp.xtexxt.chart" url="features/org.eclipse.osbp.xtext.chart.feature.source_0.9.0.201809261749/" version="0.9.0.201809261749">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.apache.pdfbox" plugin-identifier="org.apache.pdfbox" url="features/org.eclipse.osbp.dependencies.feature.apache.pdfbox_2.0.6.201809250935/" version="2.0.6.201809250935">
+</feature>
+<feature id="org.eclipse.sirius.specifier.ide.ui.source" plugin-identifier="org.eclipse.sirius.editor" url="features/org.eclipse.sirius.specifier.ide.ui.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.osbp.xtext.action.feature.source" plugin-identifier="org.eclipse.osbp.xtext" url="features/org.eclipse.osbp.xtext.action.feature.source_0.9.0.201809261733/" version="0.9.0.201809261733">
+</feature>
+<feature id="org.jboss.tools.smooks.feature" plugin-identifier="org.jboss.tools.smooks" url="features/org.jboss.tools.smooks.feature_1.2.0.201809222110/" version="1.2.0.201809222110">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.feature.core" url="features/org.eclipse.osbp.vaaclipse.feature.core_0.9.0.201809261659/" version="0.9.0.201809261659">
+</feature>
+<feature id="org.eclipse.xtend.sdk" plugin-identifier="org.eclipse.xtend.ide" url="features/org.eclipse.xtend.sdk_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="org.eclipse.osbp.mondrian.feature.source" plugin-identifier="org.eclipse.osbp.mondrian" url="features/org.eclipse.osbp.mondrian.feature.source_0.9.0.201809251702/" version="0.9.0.201809251702">
+</feature>
+<feature id="org.eclipse.osbp.xtext.basic.feature.source" plugin-identifier="org.eclipse.osbp.xtext.basic" url="features/org.eclipse.osbp.xtext.basic.feature.source_0.9.0.201809250958/" version="0.9.0.201809250958">
+</feature>
+<feature id="net.osbee.dependencies.feature.drools" plugin-identifier="net.osbee.org.drools" url="features/net.osbee.dependencies.feature.drools_5.5.1.201809222128/" version="5.5.1.201809222128">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.e4eventmanager.source" plugin-identifier="org.eclipse.osbp.runtime.event" url="features/org.eclipse.osbp.runtime.feature.e4eventmanager.source_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="com.ianbrandt.tools.m2e.mdp.feature" plugin-identifier="com.ianbrandt.tools.m2e.mdp.core" url="features/com.ianbrandt.tools.m2e.mdp.feature_0.0.4.201409291703/" version="0.0.4.201409291703">
+</feature>
+<feature id="org.osbee.dependencies.feature.smooks.runtime" plugin-identifier="org.milyn.smooks.osgi" url="features/org.osbee.dependencies.feature.smooks.runtime_0.9.0.201809222051/" version="0.9.0.201809222051">
+</feature>
+<feature id="org.eclipse.osbp.xtext.topologydsl.feature" plugin-identifier="org.eclipse.osbp.xtext.topologydsl" url="features/org.eclipse.osbp.xtext.topologydsl.feature_0.9.0.201809261753/" version="0.9.0.201809261753">
+</feature>
+<feature id="org.eclipse.jgit" url="features/org.eclipse.jgit_4.6.1.201703071140-r/" version="4.6.1.201703071140-r">
+</feature>
+<feature id="org.eclipse.mylyn.wikitext_feature" plugin-identifier="org.eclipse.mylyn.wikitext.core" url="features/org.eclipse.mylyn.wikitext_feature_2.10.1.v20161129-1925/" version="2.10.1.v20161129-1925">
+</feature>
+<feature id="org.eclipse.emf.mapping.ecore.editor" url="features/org.eclipse.emf.mapping.ecore.editor_2.10.0.v20160526-0356/" version="2.10.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.datatools.enablement.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.jsr303.validation" plugin-identifier="org.eclipse.osbp.runtime.jsr303.validation" url="features/org.eclipse.osbp.runtime.feature.jsr303.validation_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="org.eclipse.datatools.enablement.jdt.feature" plugin-identifier="org.eclipse.datatools.enablement.jdt.classpath" url="features/org.eclipse.datatools.enablement.jdt.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.xtext.i18n.feature.source" plugin-identifier="org.eclipse.osbp.xtext.i18n" url="features/org.eclipse.osbp.xtext.i18n.feature.source_0.9.0.201809261615/" version="0.9.0.201809261615">
+</feature>
+<feature id="net.osbee.pos.feature" plugin-identifier="net.osbee.pos" url="features/net.osbee.pos.feature_1.0.0.201809280933/" version="1.0.0.201809280933">
+</feature>
+<feature id="org.eclipse.datatools.enablement.msft.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.msft.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.entities" plugin-identifier="org.eclipse.osbp.dsl.entity.xtext.ui" url="features/org.eclipse.osbp.dsl.feature.entities_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.osbee.fork.csvedit.feature" plugin-identifier="org.osbee.fork.csvedit" url="features/org.osbee.fork.csvedit.feature_1.2.1.201809280905/" version="1.2.1.201809280905">
+</feature>
+<feature id="org.eclipse.osbp.xtext.functionlibrarydsl.feature" plugin-identifier="org.eclipse.osbp.xtext.functionlibrarydsl" url="features/org.eclipse.osbp.xtext.functionlibrarydsl.feature_0.9.0.201809261712/" version="0.9.0.201809261712">
+</feature>
+<feature id="org.eclipse.osbp.xtext.perspective.feature.source" plugin-identifier="org.eclipse.osbp.xtext.perspective" url="features/org.eclipse.osbp.xtext.perspective.feature.source_0.9.0.201809261755/" version="0.9.0.201809261755">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.vaadin.addons" url="features/org.eclipse.osbp.dependencies.feature.vaadin.addons_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.ide.core.ui.softwarefactory.feature" plugin-identifier="org.eclipse.osbp.ide.core.ui.softwarefactory" url="features/org.eclipse.osbp.ide.core.ui.softwarefactory.feature_0.9.0.201809261812/" version="0.9.0.201809261812">
+</feature>
+<feature id="org.eclipse.osbp.xtext.basic.feature" plugin-identifier="org.eclipse.osbp.xtext.basic" url="features/org.eclipse.osbp.xtext.basic.feature_0.9.0.201809250958/" version="0.9.0.201809250958">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.vaadin.common.source" plugin-identifier="org.eclipse.osbp.runtime.web.vaadin.common" url="features/org.eclipse.osbp.runtime.web.feature.vaadin.common.source_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.apache.commons" plugin-identifier="org.apache.commons.collections" url="features/org.eclipse.osbp.dependencies.feature.apache.commons_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.birt.report.designer.editor.xml.wtp.source" plugin-identifier="org.eclipse.birt.report.designer.ui.editor.xml.wtp" url="features/org.eclipse.birt.report.designer.editor.xml.wtp.source_4.6.0.v201606072122/" version="4.6.0.v201606072122">
+</feature>
+<feature id="org.eclipse.osbp.xtext.statemachine.feature" url="features/org.eclipse.osbp.xtext.statemachine.feature_0.9.0.201809261801/" version="0.9.0.201809261801">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.sirius" plugin-identifier="org.eclipse.sirius" url="features/org.eclipse.osbp.dependencies.feature.sirius_4.1.1.201809250935/" version="4.1.1.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.bpm.feature.source" url="features/org.eclipse.osbp.bpm.feature.source_0.9.0.201809261711/" version="0.9.0.201809261711">
+</feature>
+<feature id="org.eclipse.emf.codegen.ecore" url="features/org.eclipse.emf.codegen.ecore_2.12.0.v20160526-0356/" version="2.12.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.osbp.mondrian.api.feature.source" plugin-identifier="org.eclipse.osbp.mondrian.api" url="features/org.eclipse.osbp.mondrian.api.feature.source_0.9.0.201809251514/" version="0.9.0.201809251514">
+</feature>
+<feature id="org.eclipse.osbp.mondrian.feature" plugin-identifier="org.eclipse.osbp.mondrian" url="features/org.eclipse.osbp.mondrian.feature_0.9.0.201809251702/" version="0.9.0.201809251702">
+</feature>
+<feature id="org.eclipse.m2e.feature" plugin-identifier="org.eclipse.m2e.core" url="features/org.eclipse.m2e.feature_1.7.0.20160603-1933/" version="1.7.0.20160603-1933">
+</feature>
+<feature id="org.eclipse.osbp.xtext.perspective.feature" plugin-identifier="org.eclipse.osbp.xtext.perspective" url="features/org.eclipse.osbp.xtext.perspective.feature_0.9.0.201809261755/" version="0.9.0.201809261755">
+</feature>
+<feature id="org.eclipse.osbp.webserver.messagequeue.feature" plugin-identifier="org.eclipse.osbp.webserver.messagequeue" url="features/org.eclipse.osbp.webserver.messagequeue.feature_0.9.0.201809250952/" version="0.9.0.201809250952">
+</feature>
+<feature id="org.eclipse.osbp.utils.functionnormalizer.feature" plugin-identifier="org.eclipse.osbp.utils.functionnormalizer" url="features/org.eclipse.osbp.utils.functionnormalizer.feature_0.9.0.201809261714/" version="0.9.0.201809261714">
+</feature>
+<feature id="org.eclipse.osbp.xtext.builder.feature.ui.access.source" plugin-identifier="org.eclipse.osbp.xtext.builder.ui.access" url="features/org.eclipse.osbp.xtext.builder.feature.ui.access.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.xtext.docs" url="features/org.eclipse.xtext.docs_2.11.0.v20170130-0818/" version="2.11.0.v20170130-0818">
+</feature>
+<feature id="org.eclipse.aether.transport.http.feature" url="features/org.eclipse.aether.transport.http.feature_1.0.1.v20141111/" version="1.0.1.v20141111">
+</feature>
+<feature id="org.osbee.technologystack.feature" url="features/org.osbee.technologystack.feature_0.9.0.201809280900/" version="0.9.0.201809280900">
+</feature>
+<feature id="org.eclipse.osbp.ui.api.feature" plugin-identifier="org.eclipse.osbp.ui.api" url="features/org.eclipse.osbp.ui.api.feature_0.9.0.201809261638/" version="0.9.0.201809261638">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ide.ui.source" plugin-identifier="org.eclipse.sirius.common.ui" url="features/org.eclipse.sirius.runtime.ide.ui.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.wst.common_ui.feature" url="features/org.eclipse.wst.common_ui.feature_3.8.0.v201701191735/" version="3.8.0.v201701191735">
+</feature>
+<feature id="org.eclipse.osbp.xtext.gridsource.feature" plugin-identifier="org.eclipse.osbp.xtext.gridsource" url="features/org.eclipse.osbp.xtext.gridsource.feature_0.9.0.201809261737/" version="0.9.0.201809261737">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.data.feature" url="features/org.eclipse.datatools.sqldevtools.data.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.core.api.feature.source" plugin-identifier="org.eclipse.osbp.core.api" url="features/org.eclipse.osbp.core.api.feature.source_0.9.0.201809251516/" version="0.9.0.201809251516">
+</feature>
+<feature id="org.eclipse.mylyn.team_feature" plugin-identifier="org.eclipse.mylyn.context.core" url="features/org.eclipse.mylyn.team_feature_3.21.0.v20160701-1337/" version="3.21.0.v20160701-1337">
+</feature>
+<feature id="org.eclipse.emf.common.ui" url="features/org.eclipse.emf.common.ui_2.11.0.v20160526-0356/" version="2.11.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.osbp.xtext.signal.feature.source" url="features/org.eclipse.osbp.xtext.signal.feature.source_0.9.0.201809261807/" version="0.9.0.201809261807">
+</feature>
+<feature id="org.eclipse.sirius.runtime.acceleo" plugin-identifier="org.eclipse.sirius.common.acceleo.mtl" url="features/org.eclipse.sirius.runtime.acceleo_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.osbp.xtext.messagedsl.feature" plugin-identifier="org.eclipse.osbp.xtext.messagedsl" url="features/org.eclipse.osbp.xtext.messagedsl.feature_0.9.0.201809261726/" version="0.9.0.201809261726">
+</feature>
+<feature id="org.eclipse.osbp.ide.logger.feature" plugin-identifier="org.eclipse.osbp.ide.logger" url="features/org.eclipse.osbp.ide.logger.feature_0.9.0.201809251153/" version="0.9.0.201809251153">
+</feature>
+<feature id="org.eclipse.osbp.vaadin.emf.feature" plugin-identifier="org.eclipse.osbp.vaadin.emf" url="features/org.eclipse.osbp.vaadin.emf.feature_0.9.0.201809261656/" version="0.9.0.201809261656">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.common" plugin-identifier="org.eclipse.osbp.dsl.common.xtext.ui" url="features/org.eclipse.osbp.dsl.feature.common_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.osbee.softwarefactory.feature.source" url="features/org.osbee.softwarefactory.feature.source_0.9.0.201809280907/" version="0.9.0.201809280907">
+</feature>
+<feature id="org.eclipse.datatools.connectivity.oda.designer.feature" plugin-identifier="org.eclipse.datatools.connectivity.oda.design.ui" url="features/org.eclipse.datatools.connectivity.oda.designer.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.sf.feeling.decompiler.jad" url="features/org.sf.feeling.decompiler.jad_3.1.0.201807021924/" version="3.1.0.201807021924">
+</feature>
+<feature id="org.eclipse.osbp.themes.feature.source" plugin-identifier="org.eclipse.osbp.themes" url="features/org.eclipse.osbp.themes.feature.source_0.9.0.201809261820/" version="0.9.0.201809261820">
+</feature>
+<feature id="org.eclipse.gmf.runtime.notation" url="features/org.eclipse.gmf.runtime.notation_1.10.0.201606071631/" version="1.10.0.201606071631">
+</feature>
+<feature id="org.eclipse.osbp.ui.common.feature.source" plugin-identifier="org.eclipse.osbp.ui.common" url="features/org.eclipse.osbp.ui.common.feature.source_0.9.0.201809261742/" version="0.9.0.201809261742">
+</feature>
+<feature id="org.eclipse.babel.tapiji.tools.feature.source" plugin-identifier="org.eclipse.babel.tapiji.tools.feature" url="features/org.eclipse.babel.tapiji.tools.feature.source_0.0.2.201809222111/" version="0.0.2.201809222111">
+</feature>
+<feature id="org.eclipse.osbp.xtext.builder.feature.types" plugin-identifier="org.eclipse.osbp.xtext.builder.types.bundles" url="features/org.eclipse.osbp.xtext.builder.feature.types_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.datatools.sqldevtools.schemaobjecteditor.feature" url="features/org.eclipse.datatools.sqldevtools.schemaobjecteditor.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.mobile.vaadin.feature.ecview.source" plugin-identifier="org.eclipse.osbp.mobile.vaadin.ecview.api" url="features/org.eclipse.osbp.mobile.vaadin.feature.ecview.source_0.9.0.201809261647/" version="0.9.0.201809261647">
+</feature>
+<feature id="net.osbee.softwarefactory.feature.source" url="features/net.osbee.softwarefactory.feature.source_1.0.0.201809280941/" version="1.0.0.201809280941">
+</feature>
+<feature id="org.eclipse.osbp.ecview.feature.ide" plugin-identifier="org.eclipse.osbp.ecview.dsl.ide" url="features/org.eclipse.osbp.ecview.feature.ide_0.9.0.201809261649/" version="0.9.0.201809261649">
+</feature>
+<feature id="org.eclipse.osbp.xtext.datamartdsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.datamartdsl" url="features/org.eclipse.osbp.xtext.datamartdsl.feature.source_0.9.0.201809261731/" version="0.9.0.201809261731">
+</feature>
+<feature id="org.eclipse.osbp.xtext.i18n.feature" plugin-identifier="org.eclipse.osbp.xtext.i18n" url="features/org.eclipse.osbp.xtext.i18n.feature_0.9.0.201809261615/" version="0.9.0.201809261615">
+</feature>
+<feature id="org.osbee.dependencies.feature.smooks" plugin-identifier="org.milyn.smooks.osgi" url="features/org.osbee.dependencies.feature.smooks_0.9.0.201809222051/" version="0.9.0.201809222051">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.ecview.presentation.vaadin.source" plugin-identifier="org.eclipse.osbp.runtime.web.ecview.presentation.vaadin" url="features/org.eclipse.osbp.runtime.web.feature.ecview.presentation.vaadin.source_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.sirius.runtime.aql" plugin-identifier="org.eclipse.sirius.common.acceleo.aql" url="features/org.eclipse.sirius.runtime.aql_4.1.3.201701271256/" version="4.1.3.201701271256">
+</feature>
+<feature id="org.eclipse.uomo.feature" plugin-identifier="org.eclipse.uomo.ui" url="features/org.eclipse.uomo.feature_0.6.0.201809250946/" version="0.6.0.201809250946">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.common.source" plugin-identifier="org.eclipse.osbp.dsl.common.xtext.ui" url="features/org.eclipse.osbp.dsl.feature.common.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.xtext.blip.feature.source" plugin-identifier="org.eclipse.osbp.xtext.blip" url="features/org.eclipse.osbp.xtext.blip.feature.source_0.9.0.201809261721/" version="0.9.0.201809261721">
+</feature>
+<feature id="org.jboss.tools.smooks.feature.source" plugin-identifier="org.jboss.tools.smooks" url="features/org.jboss.tools.smooks.feature.source_1.2.0.201809222110/" version="1.2.0.201809222110">
+</feature>
+<feature id="org.sonatype.tycho.m2e.feature" url="features/org.sonatype.tycho.m2e.feature_0.8.0.201409231215/" version="0.8.0.201409231215">
+</feature>
+<feature id="org.eclipse.osbp.gitinfo.feature" plugin-identifier="org.eclipse.osbp.gitinfo" url="features/org.eclipse.osbp.gitinfo.feature_0.9.0.201809221837/" version="0.9.0.201809221837">
+</feature>
+<feature id="org.eclipse.osbp.ide.feature.headless" plugin-identifier="org.eclipse.osbp.ide.core" url="features/org.eclipse.osbp.ide.feature.headless_0.9.0.201809261642/" version="0.9.0.201809261642">
+</feature>
+<feature id="org.eclipse.osbp.xtext.functionlibrarydsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.functionlibrarydsl" url="features/org.eclipse.osbp.xtext.functionlibrarydsl.feature.source_0.9.0.201809261712/" version="0.9.0.201809261712">
+</feature>
+<feature id="org.eclipse.osbp.ecview.feature.runtime" plugin-identifier="org.eclipse.osbp.ecview.dsl" url="features/org.eclipse.osbp.ecview.feature.runtime_0.9.0.201809261649/" version="0.9.0.201809261649">
+</feature>
+<feature id="org.sonarlint.eclipse.feature" plugin-identifier="org.sonarlint.eclipse.ui" url="features/org.sonarlint.eclipse.feature_3.6.0.201806071228/" version="3.6.0.201806071228">
+</feature>
+<feature id="org.eclipse.emf.transaction" url="features/org.eclipse.emf.transaction_1.10.0.201606071900/" version="1.10.0.201606071900">
+</feature>
+<feature id="org.eclipse.xtext.xbase" url="features/org.eclipse.xtext.xbase_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="org.eclipse.swtbot.eclipse" plugin-identifier="org.eclipse.swtbot.eclipse.ui" url="features/org.eclipse.swtbot.eclipse_2.5.0.201609021837/" version="2.5.0.201609021837">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.common" plugin-identifier="org.eclipse.osbp.runtime.common" url="features/org.eclipse.osbp.runtime.feature.common_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="org.eclipse.osbp.ecview.extension.api.feature.source" plugin-identifier="org.eclipse.osbp.ecview.extension.api" url="features/org.eclipse.osbp.ecview.extension.api.feature.source_0.9.0.201809261640/" version="0.9.0.201809261640">
+</feature>
+<feature id="org.eclipse.osbp.xtext.organizationdsl.feature" plugin-identifier="org.eclipse.osbp.xtext.organizationdsl" url="features/org.eclipse.osbp.xtext.organizationdsl.feature_0.9.0.201809261751/" version="0.9.0.201809261751">
+</feature>
+<feature id="org.eclipse.osbp.osgi.hybrid.api.feature.source" plugin-identifier="org.eclipse.osbp.osgi.hybrid.api" url="features/org.eclipse.osbp.osgi.hybrid.api.feature.source_0.9.0.201809261717/" version="0.9.0.201809261717">
+</feature>
+<feature id="org.eclipse.osbp.blob.feature" url="features/org.eclipse.osbp.blob.feature_0.9.0.201809261639/" version="0.9.0.201809261639">
+</feature>
+<feature id="org.eclipse.osbp.preferences.feature.source" plugin-identifier="org.eclipse.osbp.preferences" url="features/org.eclipse.osbp.preferences.feature.source_0.9.0.201809261614/" version="0.9.0.201809261614">
+</feature>
+<feature id="org.eclipse.wst.xml_userdoc.feature" url="features/org.eclipse.wst.xml_userdoc.feature_3.8.2.v201610032207/" version="3.8.2.v201610032207">
+</feature>
+<feature id="net.osbee.technologystack.feature.source" url="features/net.osbee.technologystack.feature.source_1.0.0.201809280914/" version="1.0.0.201809280914">
+</feature>
+<feature id="org.eclipse.osbp.xtext.signal.feature" url="features/org.eclipse.osbp.xtext.signal.feature_0.9.0.201809261807/" version="0.9.0.201809261807">
+</feature>
+<feature id="org.eclipse.osbp.infogrid.feature.source" url="features/org.eclipse.osbp.infogrid.feature.source_0.9.0.201809261729/" version="0.9.0.201809261729">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.vaadin" plugin-identifier="com.vaadin.server" url="features/org.eclipse.osbp.dependencies.feature.vaadin_7.7.13.201809250935/" version="7.7.13.201809250935">
+</feature>
+<feature id="org.eclipse.equinox.server.p2" url="features/org.eclipse.equinox.server.p2_1.2.303.v20170131-1440/" version="1.2.303.v20170131-1440">
+</feature>
+<feature id="org.eclipse.aether.transport.file.feature" url="features/org.eclipse.aether.transport.file.feature_1.0.1.v20141111/" version="1.0.1.v20141111">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.dto.headless" url="features/org.eclipse.osbp.dsl.feature.dto.headless_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.utils.themes.ui.feature" plugin-identifier="org.eclipse.osbp.utils.themes.ui" url="features/org.eclipse.osbp.utils.themes.ui.feature_0.9.0.201809261710/" version="0.9.0.201809261710">
+</feature>
+<feature id="org.eclipse.osbp.authentication.feature.source" plugin-identifier="org.eclipse.osbp.authentication" url="features/org.eclipse.osbp.authentication.feature.source_0.9.0.201809261708/" version="0.9.0.201809261708">
+</feature>
+<feature id="org.eclipse.osbp.xtext.functionlibrary.common.feature" plugin-identifier="org.eclipse.osbp.xtext.functionlibrary.common" url="features/org.eclipse.osbp.xtext.functionlibrary.common.feature_0.9.0.201809251047/" version="0.9.0.201809251047">
+</feature>
+<feature id="org.eclipse.sirius.tests.support.source" url="features/org.eclipse.sirius.tests.support.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.jdt" url="features/org.eclipse.jdt_3.12.3.v20170301-0400/" version="3.12.3.v20170301-0400">
+</feature>
+<feature id="org.eclipse.emf.common" url="features/org.eclipse.emf.common_2.12.0.v20160420-0247/" version="2.12.0.v20160420-0247">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.addons.common.api.feature.source" plugin-identifier="org.eclipse.osbp.vaaclipse.addons.common.api" url="features/org.eclipse.osbp.vaaclipse.addons.common.api.feature.source_0.9.0.201809261707/" version="0.9.0.201809261707">
+</feature>
+<feature id="org.eclipse.equinox.compendium.sdk" url="features/org.eclipse.equinox.compendium.sdk_3.12.0.v20160815-1406/" version="3.12.0.v20160815-1406">
+</feature>
+<feature id="org.eclipse.egit.mylyn" plugin-identifier="org.eclipse.egit" url="features/org.eclipse.egit.mylyn_4.6.1.201703071140-r/" version="4.6.1.201703071140-r">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ide.eef" plugin-identifier="org.eclipse.sirius.eef.adapters" url="features/org.eclipse.sirius.runtime.ide.eef_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.datatools.enablement.sybase.feature" plugin-identifier="org.eclipse.datatools.enablement.sybase" url="features/org.eclipse.datatools.enablement.sybase.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.xtext.table.feature.source" plugin-identifier="org.eclipse.osbp.xtext.table" url="features/org.eclipse.osbp.xtext.table.feature.source_0.9.0.201809261738/" version="0.9.0.201809261738">
+</feature>
+<feature id="org.eclipse.osbp.xtext.authorizationdsl.feature" plugin-identifier="org.eclipse.osbp.xtext.authorizationdsl" url="features/org.eclipse.osbp.xtext.authorizationdsl.feature_0.9.0.201809261735/" version="0.9.0.201809261735">
+</feature>
+<feature id="net.osbee.softwarefactory.ide.extensions.eclipse.class.decompiler.feature" url="features/net.osbee.softwarefactory.ide.extensions.eclipse.class.decompiler.feature_1.0.0.201809280941/" version="1.0.0.201809280941">
+</feature>
+<feature id="org.eclipse.datatools.modelbase.feature" plugin-identifier="org.eclipse.datatools.modelbase.sql" url="features/org.eclipse.datatools.modelbase.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="net.sf.jautodoc.feature" plugin-identifier="net.sf.jautodoc" url="features/net.sf.jautodoc.feature_1.14.0/" version="1.14.0">
+</feature>
+<feature id="org.eclipse.osbp.utils.ui.classloaderservice.feature" plugin-identifier="org.eclipse.osbp.utils.ui.classloaderservice" url="features/org.eclipse.osbp.utils.ui.classloaderservice.feature_0.9.0.201809261817/" version="0.9.0.201809261817">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.eclipse.core.databinding" plugin-identifier="org.eclipse.core.databinding" url="features/org.eclipse.osbp.dependencies.feature.eclipse.core.databinding_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.tools.graphical.entity.feature.ui.source" url="features/org.eclipse.osbp.tools.graphical.entity.feature.ui.source_0.9.0.201809261818/" version="0.9.0.201809261818">
+</feature>
+<feature id="org.eclipse.datatools.enablement.oda.feature" plugin-identifier="org.eclipse.datatools.enablement.oda.xml" url="features/org.eclipse.datatools.enablement.oda.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.recommenders.mylyn.rcp.feature" plugin-identifier="org.eclipse.recommenders.mylyn.rcp" url="features/org.eclipse.recommenders.mylyn.rcp.feature_2.4.6.v20170307-1041/" version="2.4.6.v20170307-1041">
+</feature>
+<feature id="org.eclipse.emf.validation" url="features/org.eclipse.emf.validation_1.10.0.201606071713/" version="1.10.0.201606071713">
+</feature>
+<feature id="org.eclipse.osbp.eventbroker.feature.source" plugin-identifier="org.eclipse.osbp.eventbroker" url="features/org.eclipse.osbp.eventbroker.feature.source_0.9.0.201809261657/" version="0.9.0.201809261657">
+</feature>
+<feature id="org.eclipse.e4.rcp" url="features/org.eclipse.e4.rcp_1.5.3.v20170228-0512/" version="1.5.3.v20170228-0512">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ide.ui.acceleo.source" plugin-identifier="org.eclipse.sirius.interpreter" url="features/org.eclipse.sirius.runtime.ide.ui.acceleo.source_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.datatools.enablement.ingres.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.ingres.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.osbp.wizard.ui.feature.source" plugin-identifier="org.eclipse.osbp.wizard.ui" url="features/org.eclipse.osbp.wizard.ui.feature.source_0.9.0.201809261814/" version="0.9.0.201809261814">
+</feature>
+<feature id="org.eclipse.osbp.runtime.web.feature.vaadin.databinding.source" plugin-identifier="org.eclipse.osbp.runtime.web.vaadin.databinding" url="features/org.eclipse.osbp.runtime.web.feature.vaadin.databinding.source_0.9.0.201809261644/" version="0.9.0.201809261644">
+</feature>
+<feature id="org.eclipse.emf.codegen" url="features/org.eclipse.emf.codegen_2.11.0.v20160526-0356/" version="2.11.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.osbp.xtext.builder.feature.types.source" plugin-identifier="org.eclipse.osbp.xtext.builder.types.bundles" url="features/org.eclipse.osbp.xtext.builder.feature.types.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.xtext.datamartdsl.feature" plugin-identifier="org.eclipse.osbp.xtext.datamartdsl" url="features/org.eclipse.osbp.xtext.datamartdsl.feature_0.9.0.201809261731/" version="0.9.0.201809261731">
+</feature>
+<feature id="org.eclipse.osbp.vaadin.widgetset.feature" plugin-identifier="org.eclipse.osbp.vaadin.widgetset" url="features/org.eclipse.osbp.vaadin.widgetset.feature_0.9.0.201809261820/" version="0.9.0.201809261820">
+</feature>
+<feature id="org.eclipse.osbp.ide.feature.ui" plugin-identifier="org.eclipse.osbp.ide.core.ui" url="features/org.eclipse.osbp.ide.feature.ui_0.9.0.201809261642/" version="0.9.0.201809261642">
+</feature>
+<feature id="org.eclipse.emf.eef.extended-feature" plugin-identifier="org.eclipse.emf.eef.branding" url="features/org.eclipse.emf.eef.extended-feature_1.5.1.201601141612/" version="1.5.1.201601141612">
+</feature>
+<feature id="org.eclipse.osbp.vaaclipse.addons.common.api.feature" plugin-identifier="org.eclipse.osbp.vaaclipse.addons.common.api" url="features/org.eclipse.osbp.vaaclipse.addons.common.api.feature_0.9.0.201809261707/" version="0.9.0.201809261707">
+</feature>
+<feature id="org.osbee.fork.tapiji.feature" plugin-identifier="org.eclipselabs.tapiji.translator" url="features/org.osbee.fork.tapiji.feature_0.9.0.201809222111/" version="0.9.0.201809222111">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.dto.headless.source" url="features/org.eclipse.osbp.dsl.feature.dto.headless.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.entities.source" plugin-identifier="org.eclipse.osbp.dsl.entity.xtext.ui" url="features/org.eclipse.osbp.dsl.feature.entities.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.epp.package.common.feature" url="features/org.eclipse.epp.package.common.feature_4.6.3.20170314-1500/" version="4.6.3.20170314-1500">
+</feature>
+<feature id="org.eclipse.osbp.technologystack.feature" url="features/org.eclipse.osbp.technologystack.feature_0.9.0.201809250948/" version="0.9.0.201809250948">
+</feature>
+<feature id="org.eclipse.emf.ecore.xcore.lib.source" url="features/org.eclipse.emf.ecore.xcore.lib.source_1.2.100.v20160526-0606/" version="1.2.100.v20160526-0606">
+</feature>
+<feature id="org.eclipse.osbp.vaadin.widgetset.feature.source" plugin-identifier="org.eclipse.osbp.vaadin.widgetset" url="features/org.eclipse.osbp.vaadin.widgetset.feature.source_0.9.0.201809261820/" version="0.9.0.201809261820">
+</feature>
+<feature id="org.eclipse.babel.tapiji.tools.feature" url="features/org.eclipse.babel.tapiji.tools.feature_0.0.2.201809222111/" version="0.0.2.201809222111">
+</feature>
+<feature id="org.eclipse.osbp.xtext.table.feature" plugin-identifier="org.eclipse.osbp.xtext.table" url="features/org.eclipse.osbp.xtext.table.feature_0.9.0.201809261738/" version="0.9.0.201809261738">
+</feature>
+<feature id="org.eclipse.equinox.p2.discovery.feature" url="features/org.eclipse.equinox.p2.discovery.feature_1.0.401.v20160901-1335/" version="1.0.401.v20160901-1335">
+</feature>
+<feature id="org.eclipse.osbp.ui.common.feature" plugin-identifier="org.eclipse.osbp.ui.common" url="features/org.eclipse.osbp.ui.common.feature_0.9.0.201809261742/" version="0.9.0.201809261742">
+</feature>
+<feature id="org.eclipse.mylyn.hudson" plugin-identifier="org.eclipse.mylyn.builds.core" url="features/org.eclipse.mylyn.hudson_1.13.0.v20160806-1446/" version="1.13.0.v20160806-1446">
+</feature>
+<feature id="org.eclipse.epp.mpc" plugin-identifier="org.eclipse.epp.mpc.ui" url="features/org.eclipse.epp.mpc_1.5.4.v20170222-1941/" version="1.5.4.v20170222-1941">
+</feature>
+<feature id="org.eclipse.osbp.xtext.chart.feature" plugin-identifier="org.ecclipse.osbp.xtexxt.chart" url="features/org.eclipse.osbp.xtext.chart.feature_0.9.0.201809261749/" version="0.9.0.201809261749">
+</feature>
+<feature id="org.eclipse.osbp.bpm.api.feature.source" plugin-identifier="org.eclipse.osbp.bpm.api" url="features/org.eclipse.osbp.bpm.api.feature.source_0.9.0.201809261704/" version="0.9.0.201809261704">
+</feature>
+<feature id="org.eclipse.emf.ecore.xcore" url="features/org.eclipse.emf.ecore.xcore_1.4.0.v20160526-0606/" version="1.4.0.v20160526-0606">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.entities.headless" url="features/org.eclipse.osbp.dsl.feature.entities.headless_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.xtext.cubedsl.feature" plugin-identifier="org.eclipse.osbp.xtext.cubedsl" url="features/org.eclipse.osbp.xtext.cubedsl.feature_0.9.0.201809261727/" version="0.9.0.201809261727">
+</feature>
+<feature id="org.eclipse.osbp.ide.feature.ui.source" plugin-identifier="org.eclipse.osbp.ide.core.ui" url="features/org.eclipse.osbp.ide.feature.ui.source_0.9.0.201809261642/" version="0.9.0.201809261642">
+</feature>
+<feature id="org.eclipse.osbp.ecview.extension.feature" url="features/org.eclipse.osbp.ecview.extension.feature_0.9.0.201809261715/" version="0.9.0.201809261715">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.misc.external" url="features/org.eclipse.osbp.dependencies.feature.misc.external_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.misc.ui" url="features/org.eclipse.osbp.dependencies.feature.misc.ui_0.9.0.201809250935/" version="0.9.0.201809250935">
+</feature>
+<feature id="org.eclipse.mylyn.commons.repositories" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons.repositories_1.13.0.v20160630-1702/" version="1.13.0.v20160630-1702">
+</feature>
+<feature id="net.osbee.softwarefactory.ide.extensions.sonar.feature" url="features/net.osbee.softwarefactory.ide.extensions.sonar.feature_1.0.0.201809280941/" version="1.0.0.201809280941">
+</feature>
+<feature id="org.eclipse.emf.mwe2.launcher" url="features/org.eclipse.emf.mwe2.launcher_2.9.0.v201605261103/" version="2.9.0.v201605261103">
+</feature>
+<feature id="org.eclipse.osbp.xtext.strategy.feature" plugin-identifier="org.eclipse.osbp.xtext.strategy" url="features/org.eclipse.osbp.xtext.strategy.feature_0.9.0.201809261741/" version="0.9.0.201809261741">
+</feature>
+<feature id="org.eclipse.xtext.sdk" plugin-identifier="org.eclipse.xtext" url="features/org.eclipse.xtext.sdk_2.11.0.v20170201-0242/" version="2.11.0.v20170201-0242">
+</feature>
+<feature id="org.eclipse.osbp.ecview.extension.feature.source" url="features/org.eclipse.osbp.ecview.extension.feature.source_0.9.0.201809261715/" version="0.9.0.201809261715">
+</feature>
+<feature id="org.eclipse.osbp.runtime.feature.resolverhooks" plugin-identifier="org.eclipse.osbp.runtime.systemextension" url="features/org.eclipse.osbp.runtime.feature.resolverhooks_0.9.0.201809251452/" version="0.9.0.201809251452">
+</feature>
+<feature id="org.eclipse.osbp.bpmn2.ecore.feature" plugin-identifier="org.eclipse.osbp.bpmn2.ecore" url="features/org.eclipse.osbp.bpmn2.ecore.feature_0.9.0.201809261718/" version="0.9.0.201809261718">
+</feature>
+<feature id="org.eclipse.equinox.p2.extras.feature" url="features/org.eclipse.equinox.p2.extras.feature_1.2.203.v20170131-1444/" version="1.2.203.v20170131-1444">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.javax.transaction" plugin-identifier="javax.transaction" url="features/org.eclipse.osbp.dependencies.feature.javax.transaction_1.1.1.201809250935/" version="1.1.1.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.gitinfo.feature.source" plugin-identifier="org.eclipse.osbp.gitinfo" url="features/org.eclipse.osbp.gitinfo.feature.source_0.9.0.201809221837/" version="0.9.0.201809221837">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.eef" plugin-identifier="org.eclipse.emf.eef.components" url="features/org.eclipse.osbp.dependencies.feature.eef_1.5.1.201809250935/" version="1.5.1.201809250935">
+</feature>
+<feature id="org.eclipse.osbp.dsl.feature.common.headless.source" url="features/org.eclipse.osbp.dsl.feature.common.headless.source_0.9.0.201809261617/" version="0.9.0.201809261617">
+</feature>
+<feature id="org.eclipse.osbp.fork.mihalis.opal.imageSelector.osgi.feature" plugin-identifier="org.eclipse.osbp.fork.mihalis.opal.imageSelector.osgi" url="features/org.eclipse.osbp.fork.mihalis.opal.imageSelector.osgi.feature_0.9.0.201809261720/" version="0.9.0.201809261720">
+</feature>
+<feature id="org.eclipse.osbp.xtext.messagedsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.messagedsl" url="features/org.eclipse.osbp.xtext.messagedsl.feature.source_0.9.0.201809261726/" version="0.9.0.201809261726">
+</feature>
+<feature id="org.eclipse.osbp.xtext.reportdsl.feature.source" plugin-identifier="org.eclipse.osbp.xtext.reportdsl" url="features/org.eclipse.osbp.xtext.reportdsl.feature.source_0.9.0.201809261744/" version="0.9.0.201809261744">
+</feature>
+<feature id="org.eclipse.mylyn.builds" plugin-identifier="org.eclipse.mylyn.builds.core" url="features/org.eclipse.mylyn.builds_1.13.0.v20160725-1817/" version="1.13.0.v20160725-1817">
+</feature>
+<feature id="org.eclipse.osbp.dependencies.feature.xtext" plugin-identifier="org.eclipse.xtext" url="features/org.eclipse.osbp.dependencies.feature.xtext_2.11.0.201809250935/" version="2.11.0.201809250935">
+</feature>
+<feature id="org.eclipse.sirius.runtime.ide.ui.acceleo" plugin-identifier="org.eclipse.sirius.interpreter" url="features/org.eclipse.sirius.runtime.ide.ui.acceleo_4.1.1.201610251427/" version="4.1.1.201610251427">
+</feature>
+<feature id="org.eclipse.datatools.enablement.oracle.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.oracle.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.eclipse.emf.databinding" url="features/org.eclipse.emf.databinding_1.4.0.v20160526-0356/" version="1.4.0.v20160526-0356">
+</feature>
+<feature id="org.eclipse.datatools.enablement.sap.feature" plugin-identifier="org.eclipse.datatools.enablement.finfo" url="features/org.eclipse.datatools.enablement.sap.feature_1.13.0.201603142002/" version="1.13.0.201603142002">
+</feature>
+<feature id="org.drools.eclipse.feature" url="features/org.drools.eclipse.feature_5.5.0.Final/" version="5.5.0.Final">
+</feature>
+<feature id="org.eclipse.osbp.xtext.dialogdsl.feature" plugin-identifier="org.eclipse.osbp.xtext.dialogdsl" url="features/org.eclipse.osbp.xtext.dialogdsl.feature_0.9.0.201809261747/" version="0.9.0.201809261747">
+</feature>
+<feature id="org.eclipse.oomph.setup.core" url="features/org.eclipse.oomph.setup.core_1.7.0.v20170301-0747/" version="1.7.0.v20170301-0747">
+</feature>
+</site>
+</config>

@@ -1,0 +1,13 @@
+package eclipselink.example.jpa.employee.test;
+
+import org.junit.Test;
+
+public class SimpleHistorizedTests {
+
+	@Test
+	public void testSimple(){
+		
+	}
+	
+	
+}

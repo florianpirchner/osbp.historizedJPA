@@ -1,0 +1,19 @@
+package org.osbp.jpa.historized.tests;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.osbp.jpa.historized.tests.entities.Address;
+
+public class AddressService {
+
+	protected static Address getHistCurrent(EntityManager em) {
+		List<Address> results = em.createQuery("SELECT e FROM Address e where e.histCurrent = true", Address.class)
+				.getResultList();
+
+		return results.get(0);
+	}
+
+	
+}

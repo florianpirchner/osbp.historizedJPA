@@ -1,0 +1,15 @@
+
+Esquid:S1700³"Rename field "id"(Â¥ŠˆøÿÿÿÿHÛÌRMAJORZ
+CODE_SMELL
+œ"squid:ClassVariableVisibilityCheck³"NMake id a static final constant or non-public and provide accessors if needed.(Â¥ŠˆøÿÿÿÿHÙÌRMINORZVULNERABILITY
+^squid:S2160$"+Override the "equals" method in this class.(›°Ã—úÿÿÿÿHÔÌRMINORZ
+CODE_SMELL
+squid:CommentedOutCodeLine¦"<This block of commented-out lines of code should be removed.(«É¦ÓÿÿÿÿÿH×ÌRMAJORZ
+CODE_SMELL
+usquid:S1126Õ"AReplace this if-then-else statement by a single return statement.(òÅ¢¸úÿÿÿÿHØÌRMINORZ
+CODE_SMELL
+£"squid:ClassVariableVisibilityCheck´"UMake validFrom a static final constant or non-public and provide accessors if needed.(Ûä¶ÜøÿÿÿÿHÚÌRMINORZVULNERABILITY
+~squid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(ÙãÃÓøÿÿÿÿHÖÌRMAJORZ
+CODE_SMELL
+Žsquid:S3973Ó"WUse curly braces or indentation to denote the code conditionally executed by this "if".(œƒÞýÿÿÿÿHÕÌRCRITICALZ
+CODE_SMELL

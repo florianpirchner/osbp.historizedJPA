@@ -1,0 +1,108 @@
+package eclipselink.example.jpa.employee.model;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.apache.derby.tools.sysinfo;
+import org.eclipse.persistence.expressions.Expression;
+import org.eclipse.persistence.expressions.ExpressionBuilder;
+import org.eclipse.persistence.internal.expressions.SQLInsertStatement;
+import org.eclipse.persistence.internal.helper.DatabaseField;
+import org.eclipse.persistence.internal.queries.StatementQueryMechanism;
+import org.eclipse.persistence.internal.sessions.AbstractRecord;
+import org.eclipse.persistence.internal.sessions.AbstractSession;
+import org.eclipse.persistence.internal.sessions.EmptyRecord;
+import org.eclipse.persistence.queries.DatabaseQuery;
+import org.eclipse.persistence.queries.InsertObjectQuery;
+import org.eclipse.persistence.queries.JPQLCall;
+import org.eclipse.persistence.queries.QueryRedirector;
+import org.eclipse.persistence.queries.ReadObjectQuery;
+import org.eclipse.persistence.queries.UpdateObjectQuery;
+import org.eclipse.persistence.sessions.Record;
+import org.eclipse.persistence.sessions.Session;
+
+public class AddressInsertQueryRedirector implements QueryRedirector {
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public Object invokeQuery(DatabaseQuery query, Record arguments, Session session) {
+		InsertObjectQuery insertObjectQuery = (InsertObjectQuery) query;
+
+		Address addr = (Address) insertObjectQuery.getObject();
+		Object current = getCurrent(addr, (AbstractSession) session);
+
+		if (current == null) {
+			System.out.println(addr);
+			addr.setValidFrom(new Date());
+			addr.setValidUntil(getMaxDate());
+			addr.setHistCurrent(true);
+
+			insertObjectQuery.setDoNotRedirect(true);
+			Object newAdr = insertObjectQuery.execute((AbstractSession) session, (AbstractRecord) arguments);
+			return newAdr;
+		} else {
+			System.out.println(addr);
+			System.out.println(current);
+			// update the address to be historized
+			Date now = new Date();
+			addr.setValidUntil(now);
+			addr.setHistCurrent(false);
+			UpdateObjectQuery updateObjectQuery = new UpdateObjectQuery(addr);
+			updateObjectQuery.setDoNotRedirect(true);
+			updateObjectQuery.execute((AbstractSession) session, EmptyRecord.getEmptyRecord());
+			System.out.println(getCurrent(addr, (AbstractSession) session));
+			
+			// insert a new version
+			InsertObjectQuery _insertObjectQuery = new InsertObjectQuery(addr);
+			_insertObjectQuery.setObject(addr);
+			_insertObjectQuery.setSession((AbstractSession) session);
+			_insertObjectQuery.setDescriptor(query.getDescriptor());
+//			StatementQueryMechanism insertMechanism = new StatementQueryMechanism(_insertObjectQuery);
+			//
+			SQLInsertStatement insertStatement = new SQLInsertStatement();
+			insertStatement.setTable(query.getDescriptor().getDefaultTable());
+			insertMechanism.setSQLStatement(insertStatement);
+
+			AbstractRecord insertRow = query.getDescriptor().getObjectBuilder().buildRowForShallowInsert(addr,
+					(AbstractSession) session);
+			DatabaseField validFromDBField = query.getDescriptor().getMappingForAttributeName("validFrom").getField();
+			DatabaseField validUntilDBField = query.getDescriptor().getMappingForAttributeName("validUntil").getField();
+			DatabaseField versionDBField = query.getDescriptor().getMappingForAttributeName("version").getField();
+			DatabaseField histCurrentDBField = query.getDescriptor().getMappingForAttributeName("histCurrent")
+					.getField();
+			insertRow.put(validFromDBField, now);
+			insertRow.put(validUntilDBField, getMaxDate());
+			insertRow.put(histCurrentDBField, true);
+			insertRow.put(versionDBField, 0);
+
+			_insertObjectQuery.setTranslationRow(insertRow);
+			_insertObjectQuery.setModifyRow(insertRow);
+			_insertObjectQuery.setDoNotRedirect(true);
+			insertMechanism.insertObject();
+
+			Address newCurrent = getCurrent(addr, (AbstractSession) session);
+			return newCurrent;
+		}
+
+	}
+
+	private Address getCurrent(Address addr, AbstractSession session) {
+		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
+
+		ExpressionBuilder eb = rq.getExpressionBuilder();
+		Expression exp = eb.get("id").equal(addr.getId()).and(eb.get("histCurrent").equal(true));
+		rq.setSelectionCriteria(exp);
+
+		Address current = (Address) rq.execute((AbstractSession) session, EmptyRecord.getEmptyRecord());
+		return current;
+	}
+
+	private Date getMaxDate() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(2099, Calendar.DECEMBER, 31, 0, 0, 0);
+		cal.set(Calendar.MILLISECOND, 0);
+		Date maxDate = cal.getTime();
+		return maxDate;
+	}
+
+}

@@ -1,0 +1,51 @@
+package org.osbp.jpa.historized.tests;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Test;
+import org.osbp.jpa.historized.tests.entities.Address;
+
+public class AddressVersioningTest extends PersistenceTesting {
+
+	private EntityManager em;
+
+	@Test
+	public void test() {
+
+		EntityManagerFactory emf = createEMF(true);
+		em = emf.createEntityManager();
+		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
+		persist(em, a_v1);
+		em.close();
+		
+		em = emf.createEntityManager();
+		Address.ID key_v1 = a_v1.getHistKey();
+		Address persA_v1 = em.find(Address.class, key_v1);
+		em.close();
+		assertTrue(persA_v1.isHistCurrent());
+
+		em = emf.createEntityManager();
+		Address a_v2 = persA_v1.newVersion();
+		a_v2.setId(a_v1.getId());
+		a_v2.setCountry("AT");
+		a_v2 = (Address) merge(em, a_v2);
+		Address.ID key_v2 = a_v2.getHistKey();
+		persA_v1 = em.find(Address.class, key_v1);
+		refresh(em, persA_v1);
+		Address persA_v2 = em.find(Address.class, key_v2);
+//		assertFalse(persA_v1.isHistCurrent());
+//		assertTrue(persA_v2.isHistCurrent());
+		em.close();
+
+		em = emf.createEntityManager();
+		persA_v2.setCountry("DE");
+		persist(em, persA_v2);
+		em.close();
+
+	}
+
+}

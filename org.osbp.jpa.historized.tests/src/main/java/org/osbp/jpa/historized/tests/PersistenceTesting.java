@@ -118,6 +118,13 @@ public class PersistenceTesting {
 		em.clear();
 	}
 
+	
+	protected Address getAddress(EntityManager em, Address.ID id) {
+		Address a = em.find(Address.class, id);
+		em.detach(a);
+		return a;
+	}
+	
 	protected void clear(EntityManager em) {
 
 	}

@@ -22,7 +22,9 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.Version;
 
 import org.eclipse.persistence.annotations.Cache;
@@ -68,7 +70,7 @@ public class Address {
 	@Basic
 	@Column(name = "P_CODE")
 	private String postalCode;
-
+	
 	@Basic
 	private String street;
 
@@ -184,7 +186,7 @@ public class Address {
 	public void setVersion(int version) {
 		this.version = version;
 	}
-
+	
 	public Address newVersion() {
 		Address newVersion = new Address();
 		newVersion.setId(getId());

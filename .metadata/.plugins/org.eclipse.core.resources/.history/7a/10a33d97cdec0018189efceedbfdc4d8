@@ -1,0 +1,32 @@
+package eclipselink.example.jpa.employee.test;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.junit.Test;
+
+import eclipselink.example.jpa.employee.model.SamplePopulation;
+import example.JavaSEExample;
+
+public class SimpleHistorizedTests {
+
+	@Test
+	public void testSimple(){
+		EntityManagerFactory emf = PersistenceTesting.createEMF(true);
+        JavaSEExample example = new JavaSEExample();
+
+        try {
+            EntityManager em = emf.createEntityManager();
+
+            new SamplePopulation().createAddressVersions(em);
+            
+            em.close();
+
+        } finally {
+            emf.close();
+        }
+
+	}
+	
+	
+}

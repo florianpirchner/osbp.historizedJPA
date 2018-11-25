@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1538139188924_1" label="parent" name="parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/polyglot.nosql" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/polyglot.composite" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/polyglot.relational" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/employee.model" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/employee.parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/polyglot.client" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.debug.ui.breakpointWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1538397349206_2" label="jpa" name="jpa"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1528185554984_0" label="Window Working Set" name="Aggregate for window 1528185554984"/>
+</workingSetManager>

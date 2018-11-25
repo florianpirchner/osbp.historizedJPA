@@ -1,0 +1,32 @@
+
+hsquid:S1481"5Remove this unused "validFromDBField" local variable.(ÏĞ×ÅşÿÿÿÿHËRMINORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(£ÁÖˆHŠËRMAJORZ
+CODE_SMELL
+`squid:S1905:"2Remove this unnecessary cast to "DataModifyQuery".(É¥ˆªHËRMINORZ
+CODE_SMELL
+‘squid:S1488i"^Immediately return this expression instead of assigning it to the temporary variable "newAdr".(¯åÅĞıÿÿÿÿHŒËRMINORZ
+CODE_SMELL
+msquid:S21424"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€H‘ËRMAJORZBUG
+usquid:S1854!"BRemove this useless assignment to local variable "versionDBField".(Ó¿Ç—ÿÿÿÿÿH“ËRMAJORZ
+CODE_SMELL
+}squid:S1192""LDefine a constant instead of duplicating this literal "histCurrent" 3 times.(ãÖëÚH†ËRCRITICALZ
+CODE_SMELL
+nsquid:S1854L";Remove this useless assignment to local variable "updated".(ıàÛÓüÿÿÿÿH•ËRMAJORZ
+CODE_SMELL
+wsquid:S1854"DRemove this useless assignment to local variable "validFromDBField".(ÏĞ×ÅşÿÿÿÿH”ËRMAJORZ
+CODE_SMELL
+_squid:S1481L",Remove this unused "updated" local variable.(ıàÛÓüÿÿÿÿHËRMINORZ
+CODE_SMELL
+‘squid:S1488-"^Immediately return this expression instead of assigning it to the temporary variable "newAdr".(õ²¬‡ùÿÿÿÿH‹ËRMINORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(¬£…æH‡ËRMAJORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(®¥ëÎHˆËRMAJORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLine["<This block of commented-out lines of code should be removed.(ê¦¾H‰ËRMAJORZ
+CODE_SMELL
+fsquid:S1481!"3Remove this unused "versionDBField" local variable.(Ó¿Ç—ÿÿÿÿÿHËRMINORZ
+CODE_SMELL
+Xsquid:S001084")Either remove or fill this block of code.(ä ¹€H’ËRMAJORZ
+CODE_SMELL

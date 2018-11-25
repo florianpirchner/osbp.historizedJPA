@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddressTimedependentTest" project="org.osbp.jpa.historized.tests" tests="10" started="10" failures="0" errors="10" ignored="0">
+  <testsuite name="org.osbp.jpa.historized.tests.AddressTimedependentTest" time="0.746">
+    <testcase name="testNewVersion" classname="org.osbp.jpa.historized.tests.AddressTimedependentTest" time="0.746">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="org.osbp.jpa.historized.tests.ManyToOneTest" time="0.01">
+    <testcase name="testCustomVersion" classname="org.osbp.jpa.historized.tests.ManyToOneTest" time="0.005">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.ManyToOneTest.testCustomVersion(ManyToOneTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.ManyToOneTest" time="0.005">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.ManyToOneTest.test(ManyToOneTest.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.014">
+    <testcase name="testCustomVersion" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.004">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.OneToOneCascade.testCustomVersion(OneToOneCascade.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.005">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.OneToOneCascade.test(OneToOneCascade.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+    <testcase name="testCustomVersion_DirectMerge" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.005">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.OneToOneCascade.testCustomVersion_DirectMerge(OneToOneCascade.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.018">
+    <testcase name="testUpdateOldVersion" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.004">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.AddressVersioningTest.testUpdateOldVersion(AddressVersioningTest.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+    <testcase name="testNewObject" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.013">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.AddressVersioningTest.testNewObject(AddressVersioningTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.0">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.AddressVersioningTest.test(AddressVersioningTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+    <testcase name="testNewVersion" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.001">
+      <error>javax.persistence.PersistenceException: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1653)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:126)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:183)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:79)
+	at org.osbp.jpa.historized.tests.PersistenceTesting.createEMF(PersistenceTesting.java:73)
+	at org.osbp.jpa.historized.tests.AddressVersioningTest.testNewVersion(AddressVersioningTest.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: Exception [EclipseLink-28017] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Unable to predeploy PersistenceUnit [employee] in invalid state [DeployFailed].
+Internal Exception: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.cannotPredeploy(EntityManagerSetupException.java:223)
+	... 29 more
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createDeployFailedPersistenceException(EntityManagerSetupImpl.java:866)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:806)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:205)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.createEntityManagerImpl(EntityManagerFactoryDelegate.java:305)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManagerImpl(EntityManagerFactoryImpl.java:337)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.createEntityManager(EntityManagerFactoryImpl.java:303)
+	at org.osbp.jpa.historized.tests.AddressTimedependentTest.testNewVersion(AddressTimedependentTest.java:22)
+	... 23 more
+Caused by: Exception [EclipseLink-28019] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [employee] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.deployFailed(EntityManagerSetupException.java:239)
+	... 30 more
+Caused by: Exception [EclipseLink-0] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-93] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The table [SALARY] is not present in this descriptor.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Exception [EclipseLink-41] (Eclipse Persistence Services - 2.6.0.v20150309-bf26070): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: A non-read-only mapping must be defined for the sequence number field.
+Descriptor: RelationalDescriptor(org.osbp.jpa.historized.tests.entities.EmployeeOneToMany --&gt; [DatabaseTable(EMPLOYEEONETOMANY)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:701)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:637)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.initializeDescriptors(DatabaseSessionImpl.java:568)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.postConnectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:748)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:253)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:728)
+	... 28 more
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

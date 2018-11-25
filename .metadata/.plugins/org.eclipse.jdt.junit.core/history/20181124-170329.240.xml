@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddressTimedependentTest" project="org.osbp.jpa.historized.tests" tests="10" started="10" failures="0" errors="0" ignored="0">
+  <testsuite name="org.osbp.jpa.historized.tests.AddressTimedependentTest" time="1.683">
+    <testcase name="testNewVersion" classname="org.osbp.jpa.historized.tests.AddressTimedependentTest" time="1.683"/>
+  </testsuite>
+  <testsuite name="org.osbp.jpa.historized.tests.ManyToOneTest" time="0.108">
+    <testcase name="testCustomVersion" classname="org.osbp.jpa.historized.tests.ManyToOneTest" time="0.053"/>
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.ManyToOneTest" time="0.055"/>
+  </testsuite>
+  <testsuite name="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.122">
+    <testcase name="testCustomVersion" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.049"/>
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.048"/>
+    <testcase name="testCustomVersion_DirectMerge" classname="org.osbp.jpa.historized.tests.OneToOneCascade" time="0.025"/>
+  </testsuite>
+  <testsuite name="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.127">
+    <testcase name="testUpdateOldVersion" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.024"/>
+    <testcase name="testNewObject" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.037"/>
+    <testcase name="test" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.033"/>
+    <testcase name="testNewVersion" classname="org.osbp.jpa.historized.tests.AddressVersioningTest" time="0.033"/>
+  </testsuite>
+</testrun>
