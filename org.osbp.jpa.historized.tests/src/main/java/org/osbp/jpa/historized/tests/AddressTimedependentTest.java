@@ -94,31 +94,31 @@ public class AddressTimedependentTest extends PersistenceTesting {
 
 		// access with valid from
 		//
-		Address valid_v1 = AddressService.getValidByDate(em, valFrom_v1);
+		Address valid_v1 = AddressService.getValidByDate(em, persA_v1.getId(), valFrom_v1);
 		Assert.assertEquals(valFrom_v1.getTime(), valid_v1.getValidFrom());
 		
-		Address valid_v2 = AddressService.getValidByDate(em, valFrom_v2);
+		Address valid_v2 = AddressService.getValidByDate(em, persA_v1.getId(), valFrom_v2);
 		Assert.assertEquals(valFrom_v2.getTime(), valid_v2.getValidFrom());
 		
-		Address valid_v3 = AddressService.getValidByDate(em, valFrom_v3);
+		Address valid_v3 = AddressService.getValidByDate(em, persA_v1.getId(), valFrom_v3);
 		Assert.assertEquals(valFrom_v3.getTime(), valid_v3.getValidFrom());
 		
-		Address valid_v4 = AddressService.getValidByDate(em, valFrom_v4);
+		Address valid_v4 = AddressService.getValidByDate(em, persA_v1.getId(), valFrom_v4);
 		Assert.assertEquals(valFrom_v4.getTime(), valid_v4.getValidFrom());
 		
 		// access by validUntil --> v1.validUntil need to return v2, since validUntil is excluded
 		//
-		valid_v2 = AddressService.getValidByDate(em, valUntil_v1);
+		valid_v2 = AddressService.getValidByDate(em, persA_v1.getId(), valUntil_v1);
 		Assert.assertEquals(valFrom_v2.getTime(), valid_v2.getValidFrom());
 		
-		valid_v3 = AddressService.getValidByDate(em, valUntil_v2);
+		valid_v3 = AddressService.getValidByDate(em, persA_v1.getId(), valUntil_v2);
 		Assert.assertEquals(valFrom_v3.getTime(), valid_v3.getValidFrom());
 		
-		valid_v4 = AddressService.getValidByDate(em, valUntil_v3);
+		valid_v4 = AddressService.getValidByDate(em, persA_v1.getId(), valUntil_v3);
 		Assert.assertEquals(valFrom_v4.getTime(), valid_v4.getValidFrom());
 		
 		// access with the maxTimestamp from v4 --> Returns null, since validUntil is excluded
-		Address valid_v5 = AddressService.getValidByDate(em, valUntil_v4);
+		Address valid_v5 = AddressService.getValidByDate(em, persA_v1.getId(), valUntil_v4);
 		Assert.assertNull(valid_v5);
 		
 	}

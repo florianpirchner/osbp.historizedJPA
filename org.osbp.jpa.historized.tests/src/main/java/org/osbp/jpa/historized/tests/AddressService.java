@@ -21,13 +21,14 @@ public class AddressService {
 		return addr;
 	}
 
-	protected static Address getCurrentValid(EntityManager em) {
-		return getValidByDate(em, new Date());
+	protected static Address getCurrentValid(EntityManager em, String uuid) {
+		return getValidByDate(em, uuid, new Date());
 	}
 
-	protected static Address getValidByDate(EntityManager em, Date date) {
+	protected static Address getValidByDate(EntityManager em,  String uuid, Date date) {
 		TypedQuery<Address> query = em.createQuery(
-				"SELECT e FROM Address e where e.validFrom >= :date and e.validUntil > :date", Address.class);
+				"SELECT e FROM Address e where e.id = :id and e.validFrom >= :date and e.validUntil > :date", Address.class);
+		query.setParameter("id", uuid);
 		query.setParameter("date", date.getTime());
 		List<Address> results = query.getResultList();
 
