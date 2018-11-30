@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.osbp.jpa.historized.tests.entities.Address;
 import org.osbp.jpa.historized.tests.entities.EmployeeOneToManyNonCascade;
+import org.osbp.jpa.historized.tests.entities.UUIDHistId;
 
 public class OneToManyNonCascadeTest extends PersistenceTesting {
 
@@ -25,7 +26,7 @@ public class OneToManyNonCascadeTest extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		persist(em, a_v1);
 		Address pers_Av1 = AddressService.getHistCurrent(em, a_v1);
-		Address.ID key_Av1 = pers_Av1.getHistKey();
+		UUIDHistId key_Av1 = pers_Av1.getHistKey();
 
 		// create address 2 and get key
 		//
@@ -33,7 +34,7 @@ public class OneToManyNonCascadeTest extends PersistenceTesting {
 		a_v2.setCountry("AT");
 		persist(em, a_v2);
 		Address pers_Av2 = AddressService.getHistCurrent(em, a_v2);
-		Address.ID key_Av2 = pers_Av2.getHistKey();
+		UUIDHistId key_Av2 = pers_Av2.getHistKey();
 
 		// create address 3 and get key
 		//
@@ -41,7 +42,7 @@ public class OneToManyNonCascadeTest extends PersistenceTesting {
 		a_v3.setCountry("PL");
 		persist(em, a_v3);
 		Address pers_Av3 = AddressService.getHistCurrent(em, a_v3);
-		Address.ID key_Av3 = pers_Av3.getHistKey();
+		UUIDHistId key_Av3 = pers_Av3.getHistKey();
 
 		// read all 3 versions
 		//

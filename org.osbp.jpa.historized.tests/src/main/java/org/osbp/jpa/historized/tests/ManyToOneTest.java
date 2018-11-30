@@ -8,8 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.osbp.jpa.historized.tests.entities.Address;
-import org.osbp.jpa.historized.tests.entities.Address.ID;
 import org.osbp.jpa.historized.tests.entities.EmployeeManyToOne;
+import org.osbp.jpa.historized.tests.entities.UUIDHistId;
 
 public class ManyToOneTest extends PersistenceTesting {
 
@@ -63,7 +63,7 @@ public class ManyToOneTest extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		a_v1.setCustomVersion(true);
 		a_v1.setValidFrom(new Date().getTime());
-		Address.ID keyA_v1 = a_v1.getHistKey();
+		UUIDHistId keyA_v1 = a_v1.getHistKey();
 
 		persist(em, a_v1);
 
@@ -90,7 +90,7 @@ public class ManyToOneTest extends PersistenceTesting {
 		a_v2.setValidFrom(new Date().getTime());
 		a_v2.setCountry("AT");
 		a_v2.setVersion(0);
-		Address.ID keyA_v2 = a_v2.getHistKey();
+		UUIDHistId keyA_v2 = a_v2.getHistKey();
 		merge(em, a_v2);
 
 		e_pers1.setAddressRef(a_v2);

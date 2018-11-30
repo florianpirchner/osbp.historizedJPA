@@ -66,7 +66,7 @@ public class AddressTimedependetQueryRedirector implements QueryRedirector {
 		return current;
 	}
 
-	private Address getCurrentManaged(Address.ID addrId, AbstractSession session) {
+	private Address getCurrentManaged(UUIDHistId addrId, AbstractSession session) {
 
 		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
 

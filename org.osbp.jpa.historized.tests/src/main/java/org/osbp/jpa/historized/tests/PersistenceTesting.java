@@ -21,11 +21,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
 
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 import org.eclipse.persistence.jpa.JpaEntityManager;
 import org.osbp.jpa.historized.tests.entities.Address;
+import org.osbp.jpa.historized.tests.entities.UUIDHistId;
 
 /**
  * Persistence testing helper which creates an EMF providing testing overrides
@@ -44,18 +44,6 @@ public class PersistenceTesting {
 		props.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, "");
 		props.put(PersistenceUnitProperties.JTA_DATASOURCE, "");
 		props.put(PersistenceUnitProperties.TRANSACTION_TYPE, "RESOURCE_LOCAL");
-		// props.put(PersistenceUnitProperties.SESSION_CUSTOMIZER,
-		// "eclipselink.example.jpa.employee.model.HistorizedSequence");
-
-		// Configure the use of embedded derby for the tests allowing system
-		// properties of the same name to override
-		// setProperty(props, PersistenceUnitProperties.JDBC_DRIVER,
-		// "org.apache.derby.jdbc.EmbeddedDriver");
-		// setProperty(props, PersistenceUnitProperties.JDBC_URL,
-		// "jdbc:derby:target/derby/mysports;create=true");
-		// setProperty(props, PersistenceUnitProperties.JDBC_USER, "app");
-		// setProperty(props, PersistenceUnitProperties.JDBC_PASSWORD, "app");
-		//
 		setProperty(props, PersistenceUnitProperties.JDBC_DRIVER, "com.mysql.jdbc.Driver");
 		setProperty(props, PersistenceUnitProperties.JDBC_URL,
 				"jdbc:mysql://localhost/mysports?allowPublicKeyRetrieval=TRUE&useSSL=FALSE&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
@@ -119,7 +107,7 @@ public class PersistenceTesting {
 	}
 
 	
-	protected Address getAddress(EntityManager em, Address.ID id) {
+	protected Address getAddress(EntityManager em, UUIDHistId id) {
 		Address a = em.find(Address.class, id);
 		em.detach(a);
 		return a;

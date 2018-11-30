@@ -9,6 +9,7 @@ import javax.persistence.EntityManagerFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.osbp.jpa.historized.tests.entities.Address;
+import org.osbp.jpa.historized.tests.entities.UUIDHistId;
 
 
 public class AddressTimedependentTest extends PersistenceTesting {
@@ -30,7 +31,7 @@ public class AddressTimedependentTest extends PersistenceTesting {
 		a_v1.setCustomVersion(true);
 		a_v1.setValidFrom(getFromDate(2018, Calendar.JANUARY, 1).getTime());
 		persist(em, a_v1);
-		Address.ID key_v1 = a_v1.getHistKey();
+		UUIDHistId key_v1 = a_v1.getHistKey();
 
 		// create new object an set id
 		//
@@ -39,7 +40,7 @@ public class AddressTimedependentTest extends PersistenceTesting {
 		a_v2.setCustomVersion(true);
 		a_v2.setValidFrom(getFromDate(2018, Calendar.FEBRUARY, 2).getTime());
 		persist(em, a_v2);
-		Address.ID key_v2 = a_v2.getHistKey();
+		UUIDHistId key_v2 = a_v2.getHistKey();
 
 		// use method new version
 		//
@@ -49,14 +50,14 @@ public class AddressTimedependentTest extends PersistenceTesting {
 		a_v3.setProvince("Version 3"); 
 		a_v3.setCountry("PL");
 		persist(em, a_v3);
-		Address.ID key_v3 = a_v3.getHistKey();
+		UUIDHistId key_v3 = a_v3.getHistKey();
 
 		Address a_v4 = new Address("Heidelberg", "AU", "Version 4", "69115", "Hebelstrasse");
 		a_v4.setId(a_v1.getId());
 		a_v4.setCustomVersion(true);
 		a_v4.setValidFrom(getFromDate(2018, Calendar.DECEMBER, 12).getTime());
 		persist(em, a_v4);
-		Address.ID key_v4 = a_v4.getHistKey();
+		UUIDHistId key_v4 = a_v4.getHistKey();
 
 		Address persA_v1 = em.find(Address.class, key_v1);
 		Address persA_v2 = em.find(Address.class, key_v2);

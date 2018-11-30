@@ -10,6 +10,7 @@ import org.eclipse.persistence.internal.sessions.AbstractRecord;
 import org.eclipse.persistence.internal.sessions.AbstractSession;
 import org.eclipse.persistence.internal.sessions.EmptyRecord;
 import org.eclipse.persistence.internal.sessions.UnitOfWorkImpl;
+import org.eclipse.persistence.mappings.DatabaseMapping;
 import org.eclipse.persistence.queries.DatabaseQuery;
 import org.eclipse.persistence.queries.InsertObjectQuery;
 import org.eclipse.persistence.queries.QueryRedirector;
@@ -26,7 +27,11 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 	@Override
 	public Object invokeQuery(DatabaseQuery query, Record arguments, Session session) {
 		WriteObjectQuery insertObjectQuery = (WriteObjectQuery) query;
-
+		
+		
+		
+		DatabaseMapping mapping = query.getDescriptor().getMappingForAttributeName("validFrom");
+		mapping.getField();
 		DatabaseField validFromDBField = query.getDescriptor().getMappingForAttributeName("validFrom").getField();
 		DatabaseField validUntilDBField = query.getDescriptor().getMappingForAttributeName("validUntil").getField();
 		DatabaseField versionDBField = query.getDescriptor().getMappingForAttributeName("version").getField();
@@ -169,7 +174,7 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 		return current;
 	}
 
-	private Address getCurrentManaged(Address.ID addrId, AbstractSession session) {
+	private Address getCurrentManaged(UUIDHistId addrId, AbstractSession session) {
 
 		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
 

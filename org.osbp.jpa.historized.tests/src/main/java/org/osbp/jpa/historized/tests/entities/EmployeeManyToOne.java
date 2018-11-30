@@ -82,7 +82,7 @@ public class EmployeeManyToOne {
 	// private List<PhoneNumber> phoneNumbers = new ArrayList<PhoneNumber>();
 
 	@ManyToOne
-	@JoinColumns(value={@JoinColumn(name="ADR_ID", referencedColumnName="ADR_ID"), @JoinColumn(name="ADR_VALIDFROM", referencedColumnName="ADR_VALIDFROM")})
+	@JoinColumns(value={@JoinColumn(name="ID", referencedColumnName="ID"), @JoinColumn(name="VALIDFROM", referencedColumnName="VALIDFROM")})
 	private Address addressRef;
 
 	// @Embedded
