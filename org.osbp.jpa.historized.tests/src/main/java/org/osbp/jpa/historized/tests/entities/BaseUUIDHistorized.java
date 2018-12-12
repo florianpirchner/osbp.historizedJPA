@@ -1,11 +1,11 @@
 package org.osbp.jpa.historized.tests.entities;
 
 import java.util.Date;
+import java.util.UUID;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
+import javax.persistence.EmbeddedId;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PreRemove;
 import javax.persistence.Transient;
@@ -15,20 +15,13 @@ import org.eclipse.persistence.annotations.QueryRedirectors;
 
 @MappedSuperclass
 @SuppressWarnings("all")
-@IdClass(UUIDHistId.class)
 @QueryRedirectors(insert = AddressInsertQueryRedirector.class, update = AddressInsertQueryRedirector.class)
 public abstract class BaseUUIDHistorized {
 	@Transient
 	private boolean disposed;
 
-	@Id
-	@Column(name = "ID")
-	private String id = java.util.UUID.randomUUID().toString();
-
-	@Id
-	@Column(name = "VALIDFROM", updatable = false, length = 40)
-	@HistValidFrom
-	private long validFrom;
+	@EmbeddedId
+	private UUIDHistId id = new UUIDHistId(UUID.randomUUID().toString(), new Date().getTime());
 
 	@Version
 	@Column(name = "VERSION")
@@ -47,7 +40,6 @@ public abstract class BaseUUIDHistorized {
 	private boolean customVersion;
 
 	public BaseUUIDHistorized() {
-		this.validFrom = new Date().getTime();
 	}
 
 	/**
@@ -91,7 +83,7 @@ public abstract class BaseUUIDHistorized {
 	/**
 	 * @return Returns the id property or <code>null</code> if not present.
 	 */
-	public String getId() {
+	public UUIDHistId getId() {
 		checkDisposed();
 		return this.id;
 	}
@@ -99,9 +91,17 @@ public abstract class BaseUUIDHistorized {
 	/**
 	 * Sets the id property to this instance.
 	 */
-	public void setId(final String id) {
+	public void setId(final UUIDHistId id) {
 		checkDisposed();
 		this.id = id;
+	}
+
+	public void setValidFrom(long time) {
+		if (id == null) {
+			id = new UUIDHistId(UUID.randomUUID().toString(), time);
+		} else {
+			id.validFrom = time;
+		}
 	}
 
 	/**
@@ -118,14 +118,6 @@ public abstract class BaseUUIDHistorized {
 	public void setVersion(final int version) {
 		checkDisposed();
 		this.version = version;
-	}
-
-	public long getValidFrom() {
-		return validFrom;
-	}
-
-	public void setValidFrom(long validFrom) {
-		this.validFrom = validFrom;
 	}
 
 	public long getValidUntil() {
@@ -171,10 +163,6 @@ public abstract class BaseUUIDHistorized {
 	}
 
 	public abstract <T> T newVersion();
-
-	public UUIDHistId getHistKey() {
-		return new UUIDHistId(getId(), getValidFrom());
-	}
 
 	@Override
 	public boolean equals(final Object obj) {

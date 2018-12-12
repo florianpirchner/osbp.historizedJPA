@@ -79,6 +79,7 @@ public class PersistenceTesting {
 		txn.begin();
 		Object result = em.merge(entity);
 		txn.commit();
+		em.detach(result);
 		em.clear();
 		((JpaEntityManager) em.getDelegate()).getServerSession().getIdentityMapAccessor()
 				.invalidateClass(Address.class);

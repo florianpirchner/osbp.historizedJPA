@@ -39,7 +39,8 @@ public class OneToOneCascade extends PersistenceTesting {
 		
 		Address a_v2 = pers_Av1.newVersion();
 		a_v2.setCountry("AT");
-		merge(em, a_v2);
+		a_v2 = (Address) merge(em, a_v2);
+		e_pers1 = em.find(Employee.class, e1.getId());
 		
 		e_pers1.setAddress(a_v2);
 		merge(em , e_pers1);
@@ -59,7 +60,7 @@ public class OneToOneCascade extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		a_v1.setCustomVersion(true);
 		a_v1.setValidFrom(new Date().getTime());
-		UUIDHistId keyA_v1 = a_v1.getHistKey();
+		UUIDHistId keyA_v1 = a_v1.getId();
 
 		persist(em, a_v1);
 
@@ -86,7 +87,7 @@ public class OneToOneCascade extends PersistenceTesting {
 		a_v2.setValidFrom(new Date().getTime());
 		a_v2.setCountry("AT");
 		a_v2.setVersion(0);
-		UUIDHistId keyA_v2 = a_v2.getHistKey();
+		UUIDHistId keyA_v2 = a_v2.getId();
 		a_v2 = (Address) merge(em, a_v2);
 
 		e_pers1.setAddress(a_v2);
@@ -110,7 +111,7 @@ public class OneToOneCascade extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		a_v1.setCustomVersion(true);
 		a_v1.setValidFrom(new Date().getTime());
-		UUIDHistId keyA_v1 = a_v1.getHistKey();
+		UUIDHistId keyA_v1 = a_v1.getId();
 
 		Employee e1 = new Employee();
 		e1.setFirstName("Foo");
@@ -135,7 +136,7 @@ public class OneToOneCascade extends PersistenceTesting {
 		e_pers1.getAddress().setVersion(0);
 		e_pers1.getAddress().setCountry("AT");
 		
-		UUIDHistId keyA_v2 = e_pers1.getAddress().getHistKey();
+		UUIDHistId keyA_v2 = e_pers1.getAddress().getId();
 		e_pers1 = (Employee) merge(em, e_pers1);
 
 		Employee e_pers2 = em.find(Employee.class, e1.getId());

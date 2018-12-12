@@ -1,7 +1,11 @@
 package org.osbp.jpa.historized.tests.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public  class UUIDHistId implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -14,6 +18,16 @@ public  class UUIDHistId implements Serializable {
 	public UUIDHistId(String empId, long validFrom) {
 		this.id = empId;
 		this.validFrom = validFrom;
+	}
+	
+	public UUIDHistId copy(){
+		return new UUIDHistId(id, validFrom);
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "UUIDHistId [id=" + id + ", validFrom=" + new Date(validFrom) + "]";
 	}
 
 	@Override

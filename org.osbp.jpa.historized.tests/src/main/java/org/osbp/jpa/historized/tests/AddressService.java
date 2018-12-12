@@ -12,8 +12,8 @@ public class AddressService {
 
 	protected static Address getHistCurrent(EntityManager em, Address temp) {
 		TypedQuery<Address> query = em
-				.createQuery("SELECT e FROM Address e where e.id = :adrId and e.histCurrent = true", Address.class);
-		query.setParameter("adrId", temp.getId());
+				.createQuery("SELECT e FROM Address e where e.id.id = :adrId and e.histCurrent = true", Address.class);
+		query.setParameter("adrId", temp.getId().id);
 		List<Address> results = query.getResultList();
 
 		Address addr = results.get(0);

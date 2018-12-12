@@ -15,18 +15,20 @@ package org.osbp.jpa.historized.tests.entities;
 
 import java.util.Date;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.IdClass;
 import javax.persistence.Lob;
 
 import org.eclipse.persistence.annotations.Cache;
-import org.eclipse.persistence.annotations.QueryRedirectors;
 
 @Entity
 @Cache(refreshOnlyIfNewer = true)
+//@AttributeOverrides({ @AttributeOverride(name = "id.id", column = @Column(name = "ADDR_ID")),
+//		@AttributeOverride(name = "id.validFrom", column = @Column(name = "ADDR_VALIDFROM")) })
 public class Address extends BaseUUIDHistorized {
 
 	@Basic
@@ -107,7 +109,7 @@ public class Address extends BaseUUIDHistorized {
 
 	public Address newVersion() {
 		Address newVersion = new Address();
-		newVersion.setId(getId());
+		newVersion.setId(getId().copy());
 		newVersion.setValidFrom(new Date().getTime());
 		newVersion.setHistCurrent(true);
 		newVersion.city = city;
@@ -116,6 +118,14 @@ public class Address extends BaseUUIDHistorized {
 		newVersion.province = province;
 		newVersion.street = street;
 		return newVersion;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [getId()=" + getId() + ", getValidUntil()=" + getValidUntil() + ", getVersion()=" + getVersion()
+				+ ", isCustomVersion()=" + isCustomVersion() + ", isHistCurrent()=" + isHistCurrent() + ", city=" + city
+				+ ", country=" + country + ", postalCode=" + postalCode + ", province=" + province + ", street="
+				+ street + "]";
 	}
 
 	// @PreUpdate
@@ -128,10 +138,6 @@ public class Address extends BaseUUIDHistorized {
 	// this.validFrom = new Date();
 	// }
 
-	@Override
-	public String toString() {
-		return "Address [validFrom=" + getValidFrom() + ", validUntil=" + getValidUntil() + ", histCurrent="
-				+ isHistCurrent() + ", getId()=" + getId() + ", getVersion()=" + getVersion() + "]";
-	}
+	
 
 }

@@ -2,6 +2,7 @@ package org.osbp.jpa.historized.tests.entities;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.persistence.expressions.Expression;
 import org.eclipse.persistence.expressions.ExpressionBuilder;
@@ -19,7 +20,6 @@ import org.eclipse.persistence.queries.UpdateObjectQuery;
 import org.eclipse.persistence.queries.WriteObjectQuery;
 import org.eclipse.persistence.sessions.Record;
 import org.eclipse.persistence.sessions.Session;
-import org.eclipse.persistence.sessions.UnitOfWork;
 
 public class AddressInsertQueryRedirector implements QueryRedirector {
 
@@ -27,12 +27,12 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 	@Override
 	public Object invokeQuery(DatabaseQuery query, Record arguments, Session session) {
 		WriteObjectQuery insertObjectQuery = (WriteObjectQuery) query;
-		
-		
-		
-		DatabaseMapping mapping = query.getDescriptor().getMappingForAttributeName("validFrom");
+
+		List<DatabaseField> pk = query.getDescriptor().getPrimaryKeyFields();
+		DatabaseMapping mapping = query.getDescriptor().getMappingForAttributeName("id");
 		mapping.getField();
-		DatabaseField validFromDBField = query.getDescriptor().getMappingForAttributeName("validFrom").getField();
+		// DatabaseField validFromDBField =
+		// query.getDescriptor().getMappingForAttributeName("validFrom").getField();
 		DatabaseField validUntilDBField = query.getDescriptor().getMappingForAttributeName("validUntil").getField();
 		DatabaseField versionDBField = query.getDescriptor().getMappingForAttributeName("version").getField();
 		DatabaseField histCurrentDBField = query.getDescriptor().getMappingForAttributeName("histCurrent").getField();
@@ -93,20 +93,10 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 			// session).executeQuery(updateQuery, modifyRow);
 			//
 
-			Address currentManaged = getCurrentManaged(current.getHistKey(), (AbstractSession) session);
-
+			Address currentManaged = getCurrentManaged(current.getId(), (AbstractSession) session);
 			if (query.getDescriptor().getObjectBuilder().compareObjects(addr, currentManaged,
 					(AbstractSession) session)) {
 				return addr;
-			}
-
-			UnitOfWork aS = (UnitOfWork) session;
-			org.eclipse.persistence.sessions.changesets.ObjectChangeSet changes = aS.getUnitOfWorkChangeSet()
-					.getObjectChangeSetForClone(addr);
-			if (changes.hasChanges()) {
-				System.out.println("has Changes");
-			} else {
-				System.out.println("has no Changes");
 			}
 
 			currentManaged.setHistCurrent(false);
@@ -115,29 +105,12 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 			updateCurrent.setDoNotRedirect(true);
 			updateCurrent.setIsUserDefined(true);
 			updateCurrent.execute((AbstractSession) session, (AbstractRecord) arguments);
-
-			// AbstractRecord insertRow =
-			// query.getDescriptor().getObjectBuilder().buildRow(addr,
-			// (AbstractSession) session, WriteType.INSERT);
-			// insertRow.put(validFromDBField, now);
-			// insertRow.put(validUntilDBField, getMaxDate());
-			// insertRow.put(histCurrentDBField, true);
-			// insertRow.put(versionDBField, 0);
-
-			// ReadObjectQuery templateQuery = new
-			// ReadObjectQuery(addr.getClass());
-			// templateQuery.setSession((AbstractSession) session);
-			// Object newAddr =
-			// query.getDescriptor().getObjectBuilder().buildObject(templateQuery,
-			// insertRow);
+			session.getIdentityMapAccessor().invalidateObject(currentManaged.getId(), Address.class);
 
 			addr.setValidFrom(now);
 			addr.setValidUntil(getMaxDate());
 			addr.setHistCurrent(true);
 			addr.setVersion(0);
-
-			// insertObjectQuery.checkPrepare((AbstractSession) session,
-			// modifyRow);
 
 			InsertObjectQuery insertObjectQ = new InsertObjectQuery(addr);
 			insertObjectQ.setIsUserDefined(true);
@@ -151,7 +124,7 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 
 	private long createNow(Address addr) {
 		if (addr.isCustomVersion()) {
-			return addr.getValidFrom();
+			return addr.getId().validFrom;
 		}
 		return new Date().getTime();
 	}
@@ -163,11 +136,13 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
 
 		ExpressionBuilder eb = rq.getExpressionBuilder();
-		Expression exp = eb.get("id").equal(addr.getId()).and(eb.get("histCurrent").equal(true));
+		Expression exp = eb.get("id").get("id").equal(addr.getId().id).and(eb.get("histCurrent").equal(true));
+		exp.toString();
 		rq.setSelectionCriteria(exp);
 		rq.dontCheckCache();
 		rq.dontMaintainCache();
 
+		System.out.println(exp);
 		Address current = (Address) rq.executeInUnitOfWork(uow, EmptyRecord.getEmptyRecord());
 
 		uow.clearForClose(true);
@@ -179,7 +154,7 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 		ReadObjectQuery rq = new ReadObjectQuery(Address.class);
 
 		ExpressionBuilder eb = rq.getExpressionBuilder();
-		Expression exp = eb.get("id").equal(addrId.id).and(eb.get("validFrom").equal(addrId.validFrom));
+		Expression exp = eb.get("id").equal(addrId);
 		rq.setSelectionCriteria(exp);
 
 		Address current = (Address) rq.execute(session, EmptyRecord.getEmptyRecord());

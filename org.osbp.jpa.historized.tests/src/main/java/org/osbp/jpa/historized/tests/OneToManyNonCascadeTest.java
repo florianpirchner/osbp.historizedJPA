@@ -26,7 +26,7 @@ public class OneToManyNonCascadeTest extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		persist(em, a_v1);
 		Address pers_Av1 = AddressService.getHistCurrent(em, a_v1);
-		UUIDHistId key_Av1 = pers_Av1.getHistKey();
+		UUIDHistId key_Av1 = pers_Av1.getId();
 
 		// create address 2 and get key
 		//
@@ -34,7 +34,7 @@ public class OneToManyNonCascadeTest extends PersistenceTesting {
 		a_v2.setCountry("AT");
 		persist(em, a_v2);
 		Address pers_Av2 = AddressService.getHistCurrent(em, a_v2);
-		UUIDHistId key_Av2 = pers_Av2.getHistKey();
+		UUIDHistId key_Av2 = pers_Av2.getId();
 
 		// create address 3 and get key
 		//
@@ -42,7 +42,7 @@ public class OneToManyNonCascadeTest extends PersistenceTesting {
 		a_v3.setCountry("PL");
 		persist(em, a_v3);
 		Address pers_Av3 = AddressService.getHistCurrent(em, a_v3);
-		UUIDHistId key_Av3 = pers_Av3.getHistKey();
+		UUIDHistId key_Av3 = pers_Av3.getId();
 
 		// read all 3 versions
 		//

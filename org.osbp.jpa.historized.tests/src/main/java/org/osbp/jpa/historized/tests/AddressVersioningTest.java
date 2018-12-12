@@ -2,6 +2,8 @@ package org.osbp.jpa.historized.tests;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
@@ -27,7 +29,7 @@ public class AddressVersioningTest extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		persist(em, a_v1);
 
-		UUIDHistId key_v1 = a_v1.getHistKey();
+		UUIDHistId key_v1 = a_v1.getId();
 		Address persA_v1 = em.find(Address.class, key_v1);
 		assertTrue(persA_v1.isHistCurrent());
 
@@ -41,7 +43,7 @@ public class AddressVersioningTest extends PersistenceTesting {
 		merge(em, a_v2);
 		persA_v1 = em.find(Address.class, key_v1);
 		Address persA_v2 = AddressService.getHistCurrent(em, a_v1);
-		UUIDHistId key_v2 = persA_v2.getHistKey();
+		UUIDHistId key_v2 = persA_v2.getId();
 
 		Assert.assertFalse(persA_v1.isHistCurrent());
 		Assert.assertTrue(persA_v2.isHistCurrent());
@@ -73,7 +75,7 @@ public class AddressVersioningTest extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		persist(em, a_v1);
 
-		UUIDHistId key_v1 = a_v1.getHistKey();
+		UUIDHistId key_v1 = a_v1.getId();
 		Address persA_v1 = em.find(Address.class, key_v1);
 		assertTrue(persA_v1.isHistCurrent());
 
@@ -81,13 +83,14 @@ public class AddressVersioningTest extends PersistenceTesting {
 		//
 		Address a_v2 = new Address(a_v1.getCity(), a_v1.getCountry(), a_v1.getProvince(), a_v1.getPostalCode(),
 				a_v1.getStreet());
-		a_v2.setId(a_v1.getId());
+		a_v2.setId(a_v1.getId().copy());
+		a_v2.setValidFrom(new Date().getTime());
 		a_v2.setHistCurrent(true);
 		a_v2.setCountry("AT");
 		merge(em, a_v2);
 		persA_v1 = em.find(Address.class, key_v1);
 		Address persA_v2 = AddressService.getHistCurrent(em, a_v1);
-		UUIDHistId key_v2 = persA_v2.getHistKey();
+		UUIDHistId key_v2 = persA_v2.getId();
 
 		Assert.assertFalse(persA_v1.isHistCurrent());
 		Assert.assertTrue(persA_v2.isHistCurrent());
@@ -122,7 +125,7 @@ public class AddressVersioningTest extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		persist(em, a_v1);
 
-		UUIDHistId key_v1 = a_v1.getHistKey();
+		UUIDHistId key_v1 = a_v1.getId();
 		Address persA_v1 = em.find(Address.class, key_v1);
 		assertTrue(persA_v1.isHistCurrent());
 
@@ -133,7 +136,7 @@ public class AddressVersioningTest extends PersistenceTesting {
 		merge(em, a_v2);
 		persA_v1 = em.find(Address.class, key_v1);
 		Address persA_v2 = AddressService.getHistCurrent(em, a_v1);
-		UUIDHistId key_v2 = persA_v2.getHistKey();
+		UUIDHistId key_v2 = persA_v2.getId();
 
 		Assert.assertFalse(persA_v1.isHistCurrent());
 		Assert.assertTrue(persA_v2.isHistCurrent());
@@ -166,7 +169,7 @@ public class AddressVersioningTest extends PersistenceTesting {
 		Address a_v1 = new Address("Heidelberg", "DE", "Somewhere", "69115", "Hebelstrasse");
 		persist(em, a_v1);
 
-		UUIDHistId key_v1 = a_v1.getHistKey();
+		UUIDHistId key_v1 = a_v1.getId();
 		Address persA_v1 = em.find(Address.class, key_v1);
 		assertTrue(persA_v1.isHistCurrent());
 
@@ -175,8 +178,10 @@ public class AddressVersioningTest extends PersistenceTesting {
 		Address a_v2 = persA_v1.newVersion();
 		a_v2.setCountry("AT");
 		merge(em, a_v2);
-		persA_v1 = em.find(Address.class, key_v1);
-		Address persA_v2 = AddressService.getHistCurrent(em, a_v1);
+		persA_v1 = em.find(Address.class, key_v1.copy());
+		refresh(em, persA_v1);
+		em.clear();
+		Address persA_v2 = AddressService.getHistCurrent(em, a_v2);
 
 		Assert.assertFalse(persA_v1.isHistCurrent());
 		Assert.assertTrue(persA_v2.isHistCurrent());
