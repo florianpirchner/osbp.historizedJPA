@@ -28,14 +28,14 @@ public class AddressInsertQueryRedirector implements QueryRedirector {
 	public Object invokeQuery(DatabaseQuery query, Record arguments, Session session) {
 		WriteObjectQuery insertObjectQuery = (WriteObjectQuery) query;
 
-		List<DatabaseField> pk = query.getDescriptor().getPrimaryKeyFields();
-		DatabaseMapping mapping = query.getDescriptor().getMappingForAttributeName("id");
-		mapping.getField();
-		// DatabaseField validFromDBField =
-		// query.getDescriptor().getMappingForAttributeName("validFrom").getField();
-		DatabaseField validUntilDBField = query.getDescriptor().getMappingForAttributeName("validUntil").getField();
-		DatabaseField versionDBField = query.getDescriptor().getMappingForAttributeName("version").getField();
-		DatabaseField histCurrentDBField = query.getDescriptor().getMappingForAttributeName("histCurrent").getField();
+//		List<DatabaseField> pk = query.getDescriptor().getPrimaryKeyFields();
+//		DatabaseMapping mapping = query.getDescriptor().getMappingForAttributeName("id");
+//		mapping.getField();
+//		// DatabaseField validFromDBField =
+//		// query.getDescriptor().getMappingForAttributeName("validFrom").getField();
+//		DatabaseField validUntilDBField = query.getDescriptor().getMappingForAttributeName("validUntil").getField();
+//		DatabaseField versionDBField = query.getDescriptor().getMappingForAttributeName("version").getField();
+//		DatabaseField histCurrentDBField = query.getDescriptor().getMappingForAttributeName("histCurrent").getField();
 
 		Address addr = (Address) insertObjectQuery.getObject();
 

@@ -48,7 +48,7 @@ public class PersistenceTesting {
 		setProperty(props, PersistenceUnitProperties.JDBC_URL,
 				"jdbc:mysql://localhost/mysports?allowPublicKeyRetrieval=TRUE&useSSL=FALSE&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 		setProperty(props, PersistenceUnitProperties.JDBC_USER, "root");
-		setProperty(props, PersistenceUnitProperties.JDBC_PASSWORD, "DpJf?T.iZ4j(");
+		setProperty(props, PersistenceUnitProperties.JDBC_PASSWORD, "flofloX3##1");
 
 		// Ensure weaving is used
 		props.put(PersistenceUnitProperties.WEAVING, "false");
